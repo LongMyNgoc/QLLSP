@@ -35,7 +35,7 @@ namespace QLLSP
                     MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // Điều hướng sang form khác nếu cần
                     this.Hide();
-                    frmMainUI frmMainUI = new frmMainUI(msnv);
+                    frmMainUI frmMainUI = new frmMainUI(msnv, role);
                     frmMainUI.Show();
                 }
                 else
@@ -50,7 +50,7 @@ namespace QLLSP
                     MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // Điều hướng sang form khác nếu cần
                     this.Hide();
-                    frmMainUI frmMainUI = new frmMainUI(msnv);
+                    frmMainUI frmMainUI = new frmMainUI(msnv, role);
                     frmMainUI.Show();
                 }
                 else
@@ -65,7 +65,7 @@ namespace QLLSP
                     MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // Điều hướng sang form khác nếu cần
                     this.Hide();
-                    frmMainUI frmMainUI = new frmMainUI(msnv);
+                    frmMainUI frmMainUI = new frmMainUI(msnv, role);
                     frmMainUI.Show();
                 }
                 else

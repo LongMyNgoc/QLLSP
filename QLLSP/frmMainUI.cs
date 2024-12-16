@@ -13,12 +13,14 @@ namespace QLLSP
     public partial class frmMainUI : Form
     {
         private string _msnv;
-        public frmMainUI(string msnv)
+        private string _role;
+        public frmMainUI(string msnv, string role)
         {
             InitializeComponent();
             lbUser.Text = msnv;
             checkUser(msnv);
             _msnv = msnv;
+            _role = role;
         }
         public void AddForm(Form f)
         {
@@ -38,7 +40,7 @@ namespace QLLSP
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            frmUserInformation userInfo = new frmUserInformation(_msnv); // Khởi tạo form thông tin người dùng
+            frmUserInformation userInfo = new frmUserInformation(_msnv, _role); // Khởi tạo form thông tin người dùng
             AddForm(userInfo); // Thêm form vào panel3
         }
 

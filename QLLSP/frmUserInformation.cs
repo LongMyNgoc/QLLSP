@@ -13,11 +13,11 @@ namespace QLLSP
     public partial class frmUserInformation : Form
     {
         private string _msnv;
-        public frmUserInformation(string msnv)
+        public frmUserInformation(string msnv, string role)
         {
             InitializeComponent();
             _msnv = msnv;
-            lbUser.Text = "Thông tin của " + msnv;
+            lbUser.Text = "Thông tin " + role;
             txtTK.Text = _msnv;
         }
 
