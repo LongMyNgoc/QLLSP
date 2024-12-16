@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
+    <Compile Include="frmDMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDMK.Designer.cs">
+      <DependentUpon>frmDMK.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <Compile Include="frmUserInformation.Designer.cs">
       <DependentUpon>frmUserInformation.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmDMK.resx">
+      <DependentUpon>frmDMK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>

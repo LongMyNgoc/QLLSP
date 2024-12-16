@@ -10,3 +10,16 @@ D:\Visual 2022\QLLSP\QLLSP\obj\Debug\QLLSP.pdb
 D:\Visual 2022\QLLSP\QLLSP\obj\Debug\QLLSP.frmLogin.resources
 D:\Visual 2022\QLLSP\QLLSP\obj\Debug\QLLSP.frmMainUI.resources
 D:\Visual 2022\QLLSP\QLLSP\obj\Debug\QLLSP.frmUserInformation.resources
+C:\Users\drago\Source\Repos\QLLSP\QLLSP\bin\Debug\QLLSP.exe.config
+C:\Users\drago\Source\Repos\QLLSP\QLLSP\bin\Debug\QLLSP.exe
+C:\Users\drago\Source\Repos\QLLSP\QLLSP\bin\Debug\QLLSP.pdb
+C:\Users\drago\Source\Repos\QLLSP\QLLSP\obj\Debug\QLLSP.csproj.AssemblyReference.cache
+C:\Users\drago\Source\Repos\QLLSP\QLLSP\obj\Debug\QLLSP.frmLogin.resources
+C:\Users\drago\Source\Repos\QLLSP\QLLSP\obj\Debug\QLLSP.frmMainUI.resources
+C:\Users\drago\Source\Repos\QLLSP\QLLSP\obj\Debug\QLLSP.frmUserInformation.resources
+C:\Users\drago\Source\Repos\QLLSP\QLLSP\obj\Debug\QLLSP.Properties.Resources.resources
+C:\Users\drago\Source\Repos\QLLSP\QLLSP\obj\Debug\QLLSP.csproj.GenerateResource.cache
+C:\Users\drago\Source\Repos\QLLSP\QLLSP\obj\Debug\QLLSP.csproj.CoreCompileInputs.cache
+C:\Users\drago\Source\Repos\QLLSP\QLLSP\obj\Debug\QLLSP.exe
+C:\Users\drago\Source\Repos\QLLSP\QLLSP\obj\Debug\QLLSP.pdb
+C:\Users\drago\Source\Repos\QLLSP\QLLSP\obj\Debug\QLLSP.frmDMK.resources

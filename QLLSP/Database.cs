@@ -2,6 +2,8 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 namespace QLSinhVien
@@ -106,6 +108,93 @@ namespace QLSinhVien
             {
                 MessageBox.Show("Lỗi khi truy vấn cơ sở dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
+            }
+        }
+        public bool EditMKNV(string username, string password)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = "UPDATE NhanVien SET MatKhau = @MatKhau WHERE MSNV = @MSNV";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+
+                        // Thêm tham số với kiểu dữ liệu và giá trị cụ thể
+                        cmd.Parameters.AddWithValue("@MatKhau", password);
+                        cmd.Parameters.AddWithValue("@MSNV", username);
+
+                        // Thực hiện câu lệnh và kiểm tra số hàng bị ảnh hưởng
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        return rowsAffected > 0; // Trả về true nếu ít nhất 1 hàng bị thay đổi
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Ghi log lỗi hoặc ném ngoại lệ để xử lý ở tầng cao hơn
+                throw new Exception("Lỗi khi cập nhật mật khẩu", ex);
+            }
+        }
+        public bool EditMKCN(string username, string password)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = "UPDATE CongNhan SET MatKhau = @MatKhau WHERE MSCN = @MSCN";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+
+                        // Thêm tham số với kiểu dữ liệu và giá trị cụ thể
+                        cmd.Parameters.AddWithValue("@MatKhau", password);
+                        cmd.Parameters.AddWithValue("@MSCN", username);
+
+                        // Thực hiện câu lệnh và kiểm tra số hàng bị ảnh hưởng
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        return rowsAffected > 0; // Trả về true nếu ít nhất 1 hàng bị thay đổi
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Ghi log lỗi hoặc ném ngoại lệ để xử lý ở tầng cao hơn
+                throw new Exception("Lỗi khi cập nhật mật khẩu", ex);
+            }
+        }
+        public bool EditMKQL(string username, string password)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = "UPDATE QuanLy SET MatKhau = @MatKhau WHERE MSQL = @MSQL";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+
+                        // Thêm tham số với kiểu dữ liệu và giá trị cụ thể
+                        cmd.Parameters.AddWithValue("@MatKhau", password);
+                        cmd.Parameters.AddWithValue("@MSQL", username);
+
+                        // Thực hiện câu lệnh và kiểm tra số hàng bị ảnh hưởng
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        return rowsAffected > 0; // Trả về true nếu ít nhất 1 hàng bị thay đổi
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Ghi log lỗi hoặc ném ngoại lệ để xử lý ở tầng cao hơn
+                throw new Exception("Lỗi khi cập nhật mật khẩu", ex);
             }
         }
     }

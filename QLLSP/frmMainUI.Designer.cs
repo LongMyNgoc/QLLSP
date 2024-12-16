@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbQLLSP = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.lbUser = new System.Windows.Forms.Label();
             this.btnQLHD = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.btnQLL = new System.Windows.Forms.Button();
             this.btnQLNV = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +77,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(141, 524);
             this.panel2.TabIndex = 1;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Crimson;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(0, 468);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(141, 53);
+            this.btnExit.TabIndex = 10;
+            this.btnExit.Text = "Đăng Xuất";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnUser
             // 
@@ -158,24 +171,10 @@
             this.panel3.Size = new System.Drawing.Size(1188, 521);
             this.panel3.TabIndex = 2;
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Crimson;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(0, 468);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(141, 53);
-            this.btnExit.TabIndex = 10;
-            this.btnExit.Text = "Đăng Xuất";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // frmMainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::QLLSP.Properties.Resources.background_may_dep_cho_khai_giang;
             this.ClientSize = new System.Drawing.Size(1330, 629);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
