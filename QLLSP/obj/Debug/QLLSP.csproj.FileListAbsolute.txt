@@ -1,0 +1,12 @@
+D:\Visual 2022\QLLSP\QLLSP\bin\Debug\QLLSP.exe.config
+D:\Visual 2022\QLLSP\QLLSP\bin\Debug\QLLSP.exe
+D:\Visual 2022\QLLSP\QLLSP\bin\Debug\QLLSP.pdb
+D:\Visual 2022\QLLSP\QLLSP\obj\Debug\QLLSP.csproj.AssemblyReference.cache
+D:\Visual 2022\QLLSP\QLLSP\obj\Debug\QLLSP.Properties.Resources.resources
+D:\Visual 2022\QLLSP\QLLSP\obj\Debug\QLLSP.csproj.GenerateResource.cache
+D:\Visual 2022\QLLSP\QLLSP\obj\Debug\QLLSP.csproj.CoreCompileInputs.cache
+D:\Visual 2022\QLLSP\QLLSP\obj\Debug\QLLSP.exe
+D:\Visual 2022\QLLSP\QLLSP\obj\Debug\QLLSP.pdb
+D:\Visual 2022\QLLSP\QLLSP\obj\Debug\QLLSP.frmLogin.resources
+D:\Visual 2022\QLLSP\QLLSP\obj\Debug\QLLSP.frmMainUI.resources
+D:\Visual 2022\QLLSP\QLLSP\obj\Debug\QLLSP.frmUserInformation.resources
