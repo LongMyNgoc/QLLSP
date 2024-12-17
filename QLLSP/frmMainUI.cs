@@ -101,5 +101,17 @@ namespace QLLSP
             frmQLCN frmQLCN = new frmQLCN();
             AddForm(frmQLCN);
         }
+
+        private void btnQLHD_Click(object sender, EventArgs e)
+        {
+            QLHD qLHD = new QLHD();
+            AddForm(qLHD);
+        }
+
+        private void btnQLSP_Click(object sender, EventArgs e)
+        {
+            QLSP qLSP = new QLSP();
+            AddForm(qLSP);
+        }
     }
 }

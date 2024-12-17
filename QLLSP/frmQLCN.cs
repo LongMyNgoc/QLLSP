@@ -115,6 +115,18 @@ namespace QLLSP
             txtDV.Text = donViLamViec;
             txtSLHT.Text = soLanHoanThanh.ToString();
             txtSP.Text = tenSanPham;
+            string strMatKhau = null;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                // Kiểm tra nếu giá trị trong cột 1 khớp với MSNV
+                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() == mscn)
+                {
+                    // Lấy giá trị từ cột 2
+                    strMatKhau = row.Cells[1].Value?.ToString();
+                    break; // Dừng lại nếu tìm thấy
+                }
+            }
+            txtMK.Text = strMatKhau;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -129,10 +141,21 @@ namespace QLLSP
                 out strDonViLamViec, out strTenSanPham, out soLanHoanThanh, out strCongDoan, out strCaLamViec);
             string ngaySinhString = strNgaySinh.ToString("yyyy-MM-dd");
             string ngayBatDauCongTacString = strNgayBatDauCongTac.ToString("yyyy-MM-dd");
-            if (database.EditCongNhan(mscn, strHoten, strGioitinh, ngaySinhString, ngayBatDauCongTacString, strDonViLamViec, strTenSanPham, soLanHoanThanh, strCongDoan, strCaLamViec))
+            strHoten = txtHT.Text.Trim();
+            strCongDoan = txtCD.Text.Trim();
+            strTenSanPham = txtSP.Text.Trim();
+            strDonViLamViec = txtDV.Text.Trim();
+            strCaLamViec = txtCLV.Text.Trim();
+            soLanHoanThanh = int.Parse(txtSLHT.Text.Trim());
+            string strMatKhau = txtMK.Text.Trim();
+            if (database.EditCongNhan(mscn, strHoten, strGioitinh, ngaySinhString, ngayBatDauCongTacString, strDonViLamViec, strTenSanPham, soLanHoanThanh, strCongDoan, strCaLamViec) && database.EditMKCN(mscn, strMatKhau))
             {
                 MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDataToDataGridView();
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật không thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

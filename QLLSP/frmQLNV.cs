@@ -110,6 +110,18 @@ namespace QLLSP
             txtSGLT.Text = soGioLamThem.ToString();
             txtCV.Text = chucVu;
             txtNCDL.Text = soNgayLamViec.ToString();
+            string strMatKhau = null;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                // Kiểm tra nếu giá trị trong cột 1 khớp với MSNV
+                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() == msnv)
+                {
+                    // Lấy giá trị từ cột 2
+                    strMatKhau = row.Cells[1].Value?.ToString();
+                    break; // Dừng lại nếu tìm thấy
+                }
+            }
+            txtMK.Text = strMatKhau;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -126,10 +138,21 @@ namespace QLLSP
     out soGioLamThem, out strChucVu, out strTrinhDoChuyenMon, out strTrinhDoNgoaiNgu);
             string ngaySinhString = strNgaySinh.ToString("yyyy-MM-dd");
             string ngayBatDauCongTacString = strNgayBatDauCongTac.ToString("yyyy-MM-dd");
-            if (database.EditNhanVien(msnv, strHoten, strGioitinh, ngaySinhString, ngayBatDauCongTacString, strDonViQuanLy, soNgayLamViec, soNgayNghi, soNgayNghiCoPhep, soGioLamThem, strChucVu, strTrinhDoChuyenMon, strTrinhDoNgoaiNgu))
+            strHoten = txtHT.Text.Trim();
+            soNgayLamViec = int.Parse(txtNCDL.Text.Trim());
+            strChucVu = txtCV.Text.Trim();
+            soNgayNghi = int.Parse(txtNN.Text.Trim());
+            strDonViQuanLy = txtDV.Text.Trim();
+            soGioLamThem = int.Parse(txtSGLT.Text.Trim());
+            string strMatKhau = txtMK.Text.Trim();
+            if (database.EditNhanVien(msnv, strHoten, strGioitinh, ngaySinhString, ngayBatDauCongTacString, strDonViQuanLy, soNgayLamViec, soNgayNghi, soNgayNghiCoPhep, soGioLamThem, strChucVu, strTrinhDoChuyenMon, strTrinhDoNgoaiNgu) && database.EditMKNV(msnv, strMatKhau))
             {
                 MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDataToDataGridView();
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật không thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

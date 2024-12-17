@@ -73,8 +73,16 @@ CREATE TABLE HopDong (
     TinhTrangHopDong NVARCHAR(50),
 	NgayBatDau DATE,
     NgayKetThuc DATE,
-	SoLuong int
+	SoLuongLSP int,
+	SoLuongTSP int
 );
+
+INSERT INTO HopDong (MaHopDong, TenHopDong, TinhTrangHopDong, NgayBatDau, NgayKetThuc, SoLuongLSP, SoLuongTSP)
+VALUES 
+('HD001', N'Hợp đồng sản xuất A', N'Đang thực hiện', '2024-01-01', '2024-12-31', 1000, 500),
+('HD002', N'Hợp đồng sản xuất B', N'Hoàn thành', '2023-05-15', '2023-11-15', 1500, 750),
+('HD003', N'Hợp đồng sản xuất C', N'Chưa thực hiện', '2024-06-01', '2024-12-01', 2000, 1000);
+
 CREATE TABLE SanPham (
     MaSanPham INT PRIMARY KEY,            
     TenSanPham NVARCHAR(255),         
@@ -84,12 +92,6 @@ CREATE TABLE SanPham (
     MaHopDong NVARCHAR(50),                     
     FOREIGN KEY (MaHopDong) REFERENCES HopDong(MaHopDong) 
 );
-
--- Insert dữ liệu vào bảng HopDong
-INSERT INTO HopDong (MaHopDong, TenHopDong, TinhTrangHopDong,NgayBatDau ,NgayKetThuc)
-VALUES 
-('HD001', 'Hợp đồng Khô các loại', 'Đang thực hiện','2024-12-17' ,'2024-12-31'),
-('HD002', 'Hợp đồng gia dụng', 'Hoàn thành', '2024-12-17','2024-12-30');
 
 -- Insert dữ liệu vào bảng SanPham
 INSERT INTO SanPham (MaSanPham, TenSanPham, DonGia, SoLuong, TienDo, MaHopDong)

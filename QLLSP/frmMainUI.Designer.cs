@@ -127,6 +127,7 @@
             this.btnQLHD.TabIndex = 7;
             this.btnQLHD.Text = "Quản lý hợp đồng";
             this.btnQLHD.UseVisualStyleBackColor = false;
+            this.btnQLHD.Click += new System.EventHandler(this.btnQLHD_Click);
             // 
             // btnQLSP
             // 
@@ -139,6 +140,7 @@
             this.btnQLSP.TabIndex = 6;
             this.btnQLSP.Text = "Quản lý sản phẩm";
             this.btnQLSP.UseVisualStyleBackColor = false;
+            this.btnQLSP.Click += new System.EventHandler(this.btnQLSP_Click);
             // 
             // btnQLNV
             // 
