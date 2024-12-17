@@ -137,7 +137,7 @@ namespace QLLSP
 
                     if (exists == 0)
                     {
-                        MessageBox.Show($"Mã hợp đồng '{maHopDong}' không tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        
                         return;
                     }
                 }
@@ -264,7 +264,17 @@ namespace QLLSP
                 // Trường hợp tìm kiếm theo Mã Hợp Đồng
                 if (!string.IsNullOrWhiteSpace(txtHd.Text) && string.IsNullOrWhiteSpace(txtMa.Text))
                 {
-                    query = "SELECT MaSanPham, SUM(SoLuong) AS TongSoLuong FROM SanPham WHERE MaHopDong = @MaHopDong GROUP BY MaSanPham";
+                    query = @"
+SELECT 
+    sp.MaSanPham, 
+    sp.TenSanPham, 
+    sp.DonGia, 
+    sp.TienDo, 
+    sp.MaHopDong,
+    SUM(sp.SoLuong) AS TongSoLuong
+FROM SanPham sp
+WHERE sp.MaHopDong = @MaHopDong
+GROUP BY sp.MaSanPham, sp.TenSanPham, sp.DonGia, sp.TienDo, sp.MaHopDong";
                     //query = "SELECT MaSanPham,TenSanPham,DonGia, SUM(SoLuong) AS TongSoLuong,TienDo,MaHopDong FROM SanPham WHERE MaHopDong = @MaHopDong GROUP BY MaSanPham";
                     conn.Open();
 
@@ -400,9 +410,9 @@ namespace QLLSP
             txtMa.Text = dtGv.Rows[i].Cells[0].Value.ToString();
             txtTen.Text = dtGv.Rows[i].Cells[1].Value.ToString();
             txtDg.Text = dtGv.Rows[i].Cells[2].Value.ToString();
-            txtSl.Text = dtGv.Rows[i].Cells[3].Value.ToString();
-            cbbTd.Text = dtGv.Rows[i].Cells[4].Value.ToString();
-            txtHd.Text = dtGv.Rows[i].Cells[5].Value.ToString();
+            cbbTd.Text = dtGv.Rows[i].Cells[3].Value.ToString();
+            txtHd.Text = dtGv.Rows[i].Cells[4].Value.ToString();
+            txtSl.Text = dtGv.Rows[i].Cells[5].Value.ToString();
         }
 
         private void QLSP_Load(object sender, EventArgs e)

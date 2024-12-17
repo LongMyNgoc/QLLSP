@@ -57,7 +57,7 @@ namespace QLLSP
             command = conn.CreateCommand();
             string dth = "Dang thuc hien";
             //command.CommandText = "INSERT INTO HopDong VALUES ('" + txtMHD.Text + "' , '" + txtTenHD.Text + "' , '" + 30 + "','" + "Dang Thuc hien" + "', '" + DTNKT.Text +" AS DATETIME2" +"','" + DTNBD.Text +  " AS DATETIME2" + "','" + txtSLSP.Text + "')";
-            command.CommandText = "INSERT INTO HopDong VALUES ('" + txtMHD.Text + "' , '" + txtTenHD.Text + "' , '" + 30 + "','" + dth + "', '" + DTNKT.Text + "', '" + DTNBD.Text + "', '" + txtSLSP.Text +"', '"+txtSLTSP.Text +"')";
+            command.CommandText = "INSERT INTO HopDong VALUES ('" + txtMHD.Text + "' , '" + txtTenHD.Text + "' ,'" + dth + "', '" + DTNBD.Text + "', '" + DTNKT.Text + "', '" + txtSLSP.Text +"', '"+txtSLTSP.Text +"')";
             command.ExecuteNonQuery();
             disp_data();
         }
@@ -69,8 +69,9 @@ namespace QLLSP
             txtMHD.Text = DTG1.Rows[i].Cells[0].Value.ToString();
             txtTenHD.Text = DTG1.Rows[i].Cells[1].Value.ToString();
             DTNKT.Text = DTG1.Rows[i].Cells[4].Value.ToString();
-            DTNBD.Text = DTG1.Rows[i].Cells[5].Value.ToString();
-            txtSLSP.Text = DTG1.Rows[i].Cells[6].Value.ToString();
+            DTNBD.Text = DTG1.Rows[i].Cells[3].Value.ToString();
+            txtSLSP.Text = DTG1.Rows[i].Cells[5].Value.ToString();
+            txtSLTSP.Text = DTG1.Rows[i].Cells[6].Value.ToString();
         }
 
         private void UpdContract_Click(object sender, EventArgs e)
@@ -86,7 +87,9 @@ namespace QLLSP
         {
             command = conn.CreateCommand();
             //command.CommandText = "INSERT INTO HopDong VALUES ('" + txtMHD.Text + "' , '" + txtTenHD.Text + "' , '" + 30 + "','" + "Dang Thuc hien" + "', '" + DTNKT.Text +" AS DATETIME2" +"','" + DTNBD.Text +  " AS DATETIME2" + "','" + txtSLSP.Text + "')";
-            command.CommandText = "Delete from HopDong where MaHopDong ='" + txtMHD.Text + "'";
+            command.CommandText = "DELETE FROM SanPham WHERE MaHopDong = '" + txtMHD.Text + "'";
+            command.ExecuteNonQuery();
+            command.CommandText = "DELETE FROM HopDong WHERE MaHopDong = '" + txtMHD.Text + "'";
             command.ExecuteNonQuery();
             disp_data();
         }
