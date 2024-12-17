@@ -89,7 +89,7 @@
             this.lbTK.AutoSize = true;
             this.lbTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTK.ForeColor = System.Drawing.Color.Black;
-            this.lbTK.Location = new System.Drawing.Point(223, 126);
+            this.lbTK.Location = new System.Drawing.Point(223, 135);
             this.lbTK.Name = "lbTK";
             this.lbTK.Size = new System.Drawing.Size(93, 20);
             this.lbTK.TabIndex = 7;

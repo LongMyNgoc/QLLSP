@@ -28,55 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbQLLSP = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnQLCN = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.lbUser = new System.Windows.Forms.Label();
             this.btnQLHD = new System.Windows.Forms.Button();
             this.btnQLSP = new System.Windows.Forms.Button();
-            this.btnQLL = new System.Windows.Forms.Button();
             this.btnQLNV = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbQLLSP = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel3
             // 
-            this.panel1.BackgroundImage = global::QLLSP.Properties.Resources.background_may_dep_cho_khai_giang;
-            this.panel1.Controls.Add(this.lbQLLSP);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1329, 106);
-            this.panel1.TabIndex = 0;
-            // 
-            // lbQLLSP
-            // 
-            this.lbQLLSP.AutoSize = true;
-            this.lbQLLSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQLLSP.Location = new System.Drawing.Point(49, 12);
-            this.lbQLLSP.Name = "lbQLLSP";
-            this.lbQLLSP.Size = new System.Drawing.Size(1152, 91);
-            this.lbQLLSP.TabIndex = 0;
-            this.lbQLLSP.Text = "QUẢN LÝ LƯƠNG SẢN PHẨM";
-            this.lbQLLSP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel3.BackgroundImage = global::QLLSP.Properties.Resources.background_may_dep_cho_khai_giang;
+            this.panel3.Location = new System.Drawing.Point(141, 107);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1188, 521);
+            this.panel3.TabIndex = 2;
             // 
             // panel2
             // 
             this.panel2.BackgroundImage = global::QLLSP.Properties.Resources.background_may_dep_cho_khai_giang;
+            this.panel2.Controls.Add(this.btnQLCN);
             this.panel2.Controls.Add(this.btnExit);
             this.panel2.Controls.Add(this.btnUser);
             this.panel2.Controls.Add(this.lbUser);
             this.panel2.Controls.Add(this.btnQLHD);
             this.panel2.Controls.Add(this.btnQLSP);
-            this.panel2.Controls.Add(this.btnQLL);
             this.panel2.Controls.Add(this.btnQLNV);
             this.panel2.Location = new System.Drawing.Point(0, 107);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(141, 524);
             this.panel2.TabIndex = 1;
+            // 
+            // btnQLCN
+            // 
+            this.btnQLCN.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnQLCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLCN.ForeColor = System.Drawing.Color.White;
+            this.btnQLCN.Location = new System.Drawing.Point(0, 183);
+            this.btnQLCN.Name = "btnQLCN";
+            this.btnQLCN.Size = new System.Drawing.Size(141, 53);
+            this.btnQLCN.TabIndex = 11;
+            this.btnQLCN.Text = "Quản lý công nhân";
+            this.btnQLCN.UseVisualStyleBackColor = false;
+            this.btnQLCN.Click += new System.EventHandler(this.btnQLCN_Click);
             // 
             // btnExit
             // 
@@ -132,24 +133,12 @@
             this.btnQLSP.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnQLSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLSP.ForeColor = System.Drawing.Color.White;
-            this.btnQLSP.Location = new System.Drawing.Point(0, 183);
+            this.btnQLSP.Location = new System.Drawing.Point(0, 124);
             this.btnQLSP.Name = "btnQLSP";
             this.btnQLSP.Size = new System.Drawing.Size(141, 53);
             this.btnQLSP.TabIndex = 6;
             this.btnQLSP.Text = "Quản lý sản phẩm";
             this.btnQLSP.UseVisualStyleBackColor = false;
-            // 
-            // btnQLL
-            // 
-            this.btnQLL.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnQLL.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLL.ForeColor = System.Drawing.Color.White;
-            this.btnQLL.Location = new System.Drawing.Point(0, 124);
-            this.btnQLL.Name = "btnQLL";
-            this.btnQLL.Size = new System.Drawing.Size(141, 53);
-            this.btnQLL.TabIndex = 5;
-            this.btnQLL.Text = "Quản lý lương";
-            this.btnQLL.UseVisualStyleBackColor = false;
             // 
             // btnQLNV
             // 
@@ -162,14 +151,27 @@
             this.btnQLNV.TabIndex = 4;
             this.btnQLNV.Text = "Quản lý nhân viên";
             this.btnQLNV.UseVisualStyleBackColor = false;
+            this.btnQLNV.Click += new System.EventHandler(this.btnQLNV_Click);
             // 
-            // panel3
+            // panel1
             // 
-            this.panel3.BackgroundImage = global::QLLSP.Properties.Resources.background_may_dep_cho_khai_giang;
-            this.panel3.Location = new System.Drawing.Point(141, 107);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1188, 521);
-            this.panel3.TabIndex = 2;
+            this.panel1.BackgroundImage = global::QLLSP.Properties.Resources.background_may_dep_cho_khai_giang;
+            this.panel1.Controls.Add(this.lbQLLSP);
+            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1329, 106);
+            this.panel1.TabIndex = 0;
+            // 
+            // lbQLLSP
+            // 
+            this.lbQLLSP.AutoSize = true;
+            this.lbQLLSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQLLSP.Location = new System.Drawing.Point(49, 12);
+            this.lbQLLSP.Name = "lbQLLSP";
+            this.lbQLLSP.Size = new System.Drawing.Size(1152, 91);
+            this.lbQLLSP.TabIndex = 0;
+            this.lbQLLSP.Text = "QUẢN LÝ LƯƠNG SẢN PHẨM";
+            this.lbQLLSP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMainUI
             // 
@@ -181,10 +183,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmMainUI";
             this.Text = "frmMainUI";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -198,9 +200,9 @@
         private System.Windows.Forms.Button btnQLNV;
         private System.Windows.Forms.Button btnQLHD;
         private System.Windows.Forms.Button btnQLSP;
-        private System.Windows.Forms.Button btnQLL;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Label lbUser;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnQLCN;
     }
 }

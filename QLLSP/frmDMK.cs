@@ -46,7 +46,7 @@ namespace QLLSP
                         {
                             if(database.EditMKNV(_msnv, MKM))
                             {
-                                MessageBox.Show("Mật khẩu đã thay đổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("Mật khẩu đã thay đổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }    
                         }
                         else
@@ -59,7 +59,7 @@ namespace QLLSP
                         {
                             if (database.EditMKCN(_msnv, MKM))
                             {
-                                MessageBox.Show("Mật khẩu đã thay đổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("Mật khẩu đã thay đổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         else
@@ -72,7 +72,7 @@ namespace QLLSP
                         {
                             if (database.EditMKQL(_msnv, MKM))
                             {
-                                MessageBox.Show("Mật khẩu đã thay đổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("Mật khẩu đã thay đổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         else

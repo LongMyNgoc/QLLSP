@@ -23,3 +23,7 @@ C:\Users\drago\Source\Repos\QLLSP\QLLSP\obj\Debug\QLLSP.csproj.CoreCompileInputs
 C:\Users\drago\Source\Repos\QLLSP\QLLSP\obj\Debug\QLLSP.exe
 C:\Users\drago\Source\Repos\QLLSP\QLLSP\obj\Debug\QLLSP.pdb
 C:\Users\drago\Source\Repos\QLLSP\QLLSP\obj\Debug\QLLSP.frmDMK.resources
+C:\Users\drago\source\repos\QLLSP\QLLSP\obj\Debug\QLLSP.frmQLNV.resources
+C:\Users\drago\source\repos\QLLSP\QLLSP\obj\Debug\QLLSP.frmQLCN.resources
+C:\Users\drago\source\repos\QLLSP\QLLSP\obj\Debug\QLLSP.frmNVInformation.resources
+C:\Users\drago\source\repos\QLLSP\QLLSP\obj\Debug\QLLSP.frmCNInformation.resources

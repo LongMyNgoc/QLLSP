@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\drago\\source\\repos\\QLLSP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\qllsp\\frmdmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:qllsp\\frmdmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|c:\\users\\drago\\source\\repos\\qllsp\\qllsp\\frmqlcn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:qllsp\\frmqlcn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\qllsp\\frmqlnv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:qllsp\\frmqlnv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\qllsp\\frmnvinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:qllsp\\frmnvinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\qllsp\\frmcninformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:qllsp\\frmcninformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\qllsp\\frmqlnv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:qllsp\\frmqlnv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\Database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:QLLSP\\Database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\qllsp\\frmmainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:qllsp\\frmmainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|c:\\users\\drago\\source\\repos\\qllsp\\qllsp\\frmcninformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:qllsp\\frmcninformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\qllsp\\frmqlcn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:qllsp\\frmqlcn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\qllsp\\frmuserinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:qllsp\\frmuserinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmMainUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:QLLSP\\frmMainUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\qllsp\\frmuserinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,16 +47,32 @@
       "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:qllsp\\frmdmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmLogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:QLLSP\\frmLogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmDMK.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:QLLSP\\frmDMK.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|c:\\users\\drago\\source\\repos\\qllsp\\qllsp\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:qllsp\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\qllsp\\frmmainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:qllsp\\frmmainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmMainUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:QLLSP\\frmMainUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\qllsp\\frmnvinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:qllsp\\frmnvinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:QLLSP\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\qllsp\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:qllsp\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmLogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{111A7E77-3955-4AC6-A128-7B5F598EDC04}|QLLSP\\QLLSP.csproj|solutionrelative:QLLSP\\frmLogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,8 +82,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 14,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\Database.cs",
+              "RelativeDocumentMoniker": "QLLSP\\Database.cs",
+              "ToolTip": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\Database.cs",
+              "RelativeToolTip": "QLLSP\\Database.cs",
+              "ViewState": "AgIAAMkCAAAAAAAAAAAAAFIDAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T07:30:39.549Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmQLNV.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmQLNV.cs",
+              "RelativeDocumentMoniker": "QLLSP\\frmQLNV.cs",
+              "ToolTip": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmQLNV.cs [Design]",
+              "RelativeToolTip": "QLLSP\\frmQLNV.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T04:38:02.081Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -103,19 +162,107 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "frmQLCN.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmQLCN.cs",
+              "RelativeDocumentMoniker": "QLLSP\\frmQLCN.cs",
+              "ToolTip": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmQLCN.cs",
+              "RelativeToolTip": "QLLSP\\frmQLCN.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAowIYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:39:05.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmQLNV.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmQLNV.cs",
+              "RelativeDocumentMoniker": "QLLSP\\frmQLNV.cs",
+              "ToolTip": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmQLNV.cs",
+              "RelativeToolTip": "QLLSP\\frmQLNV.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAcwHoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T06:22:38.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmCNInformation.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmCNInformation.cs",
+              "RelativeDocumentMoniker": "QLLSP\\frmCNInformation.cs",
+              "ToolTip": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmCNInformation.cs",
+              "RelativeToolTip": "QLLSP\\frmCNInformation.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAcwEUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T06:15:10.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmCNInformation.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmCNInformation.cs",
+              "RelativeDocumentMoniker": "QLLSP\\frmCNInformation.cs",
+              "ToolTip": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmCNInformation.cs [Design]",
+              "RelativeToolTip": "QLLSP\\frmCNInformation.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T06:10:33.355Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmNVInformation.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmNVInformation.cs",
+              "RelativeDocumentMoniker": "QLLSP\\frmNVInformation.cs",
+              "ToolTip": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmNVInformation.cs",
+              "RelativeToolTip": "QLLSP\\frmNVInformation.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAowE8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T05:55:05.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmNVInformation.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmNVInformation.cs",
+              "RelativeDocumentMoniker": "QLLSP\\frmNVInformation.cs",
+              "ToolTip": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmNVInformation.cs [Design]",
+              "RelativeToolTip": "QLLSP\\frmNVInformation.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T05:54:14.598Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmQLCN.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmQLCN.cs",
+              "RelativeDocumentMoniker": "QLLSP\\frmQLCN.cs",
+              "ToolTip": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmQLCN.cs [Design]",
+              "RelativeToolTip": "QLLSP\\frmQLCN.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T05:18:21.607Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "frmDMK.cs",
               "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmDMK.cs",
               "RelativeDocumentMoniker": "QLLSP\\frmDMK.cs",
               "ToolTip": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmDMK.cs",
               "RelativeToolTip": "QLLSP\\frmDMK.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAQwEgAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAuwEcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T13:43:47.682Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "frmDMK.cs [Design]",
               "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmDMK.cs",
               "RelativeDocumentMoniker": "QLLSP\\frmDMK.cs",
@@ -127,20 +274,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "frmUserInformation.cs",
               "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmUserInformation.cs",
               "RelativeDocumentMoniker": "QLLSP\\frmUserInformation.cs",
               "ToolTip": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmUserInformation.cs",
               "RelativeToolTip": "QLLSP\\frmUserInformation.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwCUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwCoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T09:11:37.029Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "frmUserInformation.cs [Design]",
               "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmUserInformation.cs",
               "RelativeDocumentMoniker": "QLLSP\\frmUserInformation.cs",
@@ -152,33 +299,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "frmMainUI.cs",
               "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmMainUI.cs",
               "RelativeDocumentMoniker": "QLLSP\\frmMainUI.cs",
               "ToolTip": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmMainUI.cs",
               "RelativeToolTip": "QLLSP\\frmMainUI.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAiwCgAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAzwDQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T08:01:16.637Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 17,
               "Title": "frmLogin.cs",
               "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmLogin.cs",
               "RelativeDocumentMoniker": "QLLSP\\frmLogin.cs",
               "ToolTip": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmLogin.cs",
               "RelativeToolTip": "QLLSP\\frmLogin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwB8AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T08:50:53.278Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\Program.cs",
               "RelativeDocumentMoniker": "QLLSP\\Program.cs",
@@ -191,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "frmMainUI.cs [Design]",
               "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmMainUI.cs",
               "RelativeDocumentMoniker": "QLLSP\\frmMainUI.cs",
@@ -203,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "frmLogin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\frmLogin.cs",
               "RelativeDocumentMoniker": "QLLSP\\frmLogin.cs",
@@ -212,19 +359,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T08:49:40.644Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Database.cs",
-              "DocumentMoniker": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\Database.cs",
-              "RelativeDocumentMoniker": "QLLSP\\Database.cs",
-              "ToolTip": "C:\\Users\\drago\\source\\repos\\QLLSP\\QLLSP\\Database.cs",
-              "RelativeToolTip": "QLLSP\\Database.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAYwMUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T07:30:39.549Z",
-              "EditorCaption": ""
             }
           ]
         }

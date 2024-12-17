@@ -14,6 +14,7 @@ namespace QLLSP
     {
         private string _msnv;
         private string _role;
+        private string _firstTwoChars;
         public frmMainUI(string msnv, string role)
         {
             InitializeComponent();
@@ -40,8 +41,21 @@ namespace QLLSP
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            frmUserInformation userInfo = new frmUserInformation(_msnv, _role); // Khởi tạo form thông tin người dùng
-            AddForm(userInfo); // Thêm form vào panel3
+            if (_firstTwoChars == "QL")
+            {
+                frmUserInformation userInfo = new frmUserInformation(_msnv, _role); // Khởi tạo form thông tin người dùng
+                AddForm(userInfo); // Thêm form vào panel3
+            }
+            else if (_firstTwoChars == "NV")
+            {
+                frmNVInformation frmNVInformation = new frmNVInformation(_msnv, _role);
+                AddForm(frmNVInformation);
+            } 
+            else if (_firstTwoChars == "CN")
+            {
+                frmCNInformation frmCNInformation = new frmCNInformation(_msnv, _role);
+                AddForm(frmCNInformation);
+            }    
         }
 
         private void checkUser(string msnv)
@@ -54,15 +68,19 @@ namespace QLLSP
 
             // Lấy 2 ký tự đầu tiên
             string firstTwoChars = "" + msnv[0] + msnv[1];
-
+            _firstTwoChars = firstTwoChars;
             // Kiểm tra giá trị của 2 ký tự đầu
-            if (firstTwoChars == "NV" || firstTwoChars == "CN")
+            if (firstTwoChars == "CN")
             {
                 btnQLHD.Hide();
-                btnQLL.Hide();
                 btnQLNV.Hide();
                 btnQLSP.Hide();
+                btnQLCN.Hide();
             }
+            else if(firstTwoChars == "NV")
+            {
+                btnQLNV.Hide();
+            }    
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -70,6 +88,18 @@ namespace QLLSP
             this.Hide();
             frmLogin frmLogin = new frmLogin();
             frmLogin.Show();
+        }
+
+        private void btnQLNV_Click(object sender, EventArgs e)
+        {
+            frmQLNV frmQLNV = new frmQLNV();
+            AddForm(frmQLNV);
+        }
+
+        private void btnQLCN_Click(object sender, EventArgs e)
+        {
+            frmQLCN frmQLCN = new frmQLCN();
+            AddForm(frmQLCN);
         }
     }
 }
