@@ -30,6 +30,8 @@
         {
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnQLLCN = new System.Windows.Forms.Button();
+            this.btnQLLNV = new System.Windows.Forms.Button();
             this.btnQLCN = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
@@ -54,6 +56,8 @@
             // panel2
             // 
             this.panel2.BackgroundImage = global::QLLSP.Properties.Resources.background_may_dep_cho_khai_giang;
+            this.panel2.Controls.Add(this.btnQLLCN);
+            this.panel2.Controls.Add(this.btnQLLNV);
             this.panel2.Controls.Add(this.btnQLCN);
             this.panel2.Controls.Add(this.btnExit);
             this.panel2.Controls.Add(this.btnUser);
@@ -65,6 +69,32 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(141, 524);
             this.panel2.TabIndex = 1;
+            // 
+            // btnQLLCN
+            // 
+            this.btnQLLCN.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnQLLCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLLCN.ForeColor = System.Drawing.Color.White;
+            this.btnQLLCN.Location = new System.Drawing.Point(0, 295);
+            this.btnQLLCN.Name = "btnQLLCN";
+            this.btnQLLCN.Size = new System.Drawing.Size(141, 53);
+            this.btnQLLCN.TabIndex = 13;
+            this.btnQLLCN.Text = "Quản lý lương công nhân";
+            this.btnQLLCN.UseVisualStyleBackColor = false;
+            this.btnQLLCN.Click += new System.EventHandler(this.btnQLLCN_Click);
+            // 
+            // btnQLLNV
+            // 
+            this.btnQLLNV.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnQLLNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLLNV.ForeColor = System.Drawing.Color.White;
+            this.btnQLLNV.Location = new System.Drawing.Point(0, 236);
+            this.btnQLLNV.Name = "btnQLLNV";
+            this.btnQLLNV.Size = new System.Drawing.Size(141, 53);
+            this.btnQLLNV.TabIndex = 12;
+            this.btnQLLNV.Text = "Quản lý lương nhân viên";
+            this.btnQLLNV.UseVisualStyleBackColor = false;
+            this.btnQLLNV.Click += new System.EventHandler(this.btnQLLNV_Click);
             // 
             // btnQLCN
             // 
@@ -206,5 +236,7 @@
         private System.Windows.Forms.Label lbUser;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnQLCN;
+        private System.Windows.Forms.Button btnQLLCN;
+        private System.Windows.Forms.Button btnQLLNV;
     }
 }

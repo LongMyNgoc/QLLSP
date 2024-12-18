@@ -29,3 +29,8 @@ C:\Users\drago\source\repos\QLLSP\QLLSP\obj\Debug\QLLSP.frmNVInformation.resourc
 C:\Users\drago\source\repos\QLLSP\QLLSP\obj\Debug\QLLSP.frmCNInformation.resources
 C:\Users\drago\source\repos\QLLSP\QLLSP\obj\Debug\QLLSP.QLHD.resources
 C:\Users\drago\source\repos\QLLSP\QLLSP\obj\Debug\QLLSP.QLSP.resources
+C:\Users\drago\source\repos\QLLSP\QLLSP\obj\Debug\QLLSP.frmQLLNV.resources
+C:\Users\drago\source\repos\QLLSP\QLLSP\obj\Debug\QLLSP.frmLNV.resources
+C:\Users\drago\source\repos\QLLSP\QLLSP\obj\Debug\QLLSP.CongNhan.resources
+C:\Users\drago\source\repos\QLLSP\QLLSP\obj\Debug\QLLSP.Form1.resources
+C:\Users\drago\source\repos\QLLSP\QLLSP\obj\Debug\QLLSP.frmQLHD.resources

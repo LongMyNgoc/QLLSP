@@ -46,7 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CongNHan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CongNHan.Designer.cs">
+      <DependentUpon>CongNHan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCNInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +70,12 @@
     </Compile>
     <Compile Include="frmDMK.Designer.cs">
       <DependentUpon>frmDMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLNV.Designer.cs">
+      <DependentUpon>frmLNV.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -82,6 +100,18 @@
     </Compile>
     <Compile Include="frmQLCN.Designer.cs">
       <DependentUpon>frmQLCN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLHD.Designer.cs">
+      <DependentUpon>frmQLHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLLNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLLNV.Designer.cs">
+      <DependentUpon>frmQLLNV.cs</DependentUpon>
     </Compile>
     <Compile Include="frmQLNV.cs">
       <SubType>Form</SubType>
@@ -119,11 +149,20 @@
     <Compile Include="QLSP.Designer.cs">
       <DependentUpon>QLSP.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CongNHan.resx">
+      <DependentUpon>CongNHan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCNInformation.resx">
       <DependentUpon>frmCNInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDMK.resx">
       <DependentUpon>frmDMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLNV.resx">
+      <DependentUpon>frmLNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -136,6 +175,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLCN.resx">
       <DependentUpon>frmQLCN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLHD.resx">
+      <DependentUpon>frmQLHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLLNV.resx">
+      <DependentUpon>frmQLLNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLNV.resx">
       <DependentUpon>frmQLNV.cs</DependentUpon>

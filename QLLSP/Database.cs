@@ -859,6 +859,222 @@ namespace QLSinhVien
                 }
             }
         }
+        public DataTable GetQuanLyLuongNhanVienData()
+        {
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = @"
+                SELECT 
+                    LuongID, 
+                    MSNV, 
+                    Thang, 
+                    Nam, 
+                    HeSoLuong, 
+                    PhuCapChucVu, 
+                    SoNgayLamViec, 
+                    SoNgayNghiCoPhep,
+TienBaoHiemXaHoi,
+                    TongLuong
+                FROM QuanLyLuongNhanVien";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dataTable); // Đổ dữ liệu vào DataTable
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi lấy dữ liệu: " + ex.Message);
+            }
+
+            return dataTable;
+        }
+        public bool InsertQuanLyLuongNhanVienData(
+    string MSNV,
+    int Thang,
+    int Nam,
+    decimal HeSoLuong,
+    decimal PhuCapChucVu,
+    int SoNgayLamViec,
+    int SoNgayNghiCoPhep,
+    decimal TienBaoHiemXaHoi,
+    decimal TongLuong)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = @"
+                INSERT INTO QuanLyLuongNhanVien 
+                (MSNV, Thang, Nam, HeSoLuong, PhuCapChucVu, SoNgayLamViec, SoNgayNghiCoPhep, TienBaoHiemXaHoi, TongLuong)
+                VALUES 
+                (@MSNV, @Thang, @Nam, @HeSoLuong, @PhuCapChucVu, @SoNgayLamViec, @SoNgayNghiCoPhep, @TienBaoHiemXaHoi, @TongLuong)";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        // Gán giá trị tham số
+                        cmd.Parameters.AddWithValue("@MSNV", MSNV);
+                        cmd.Parameters.AddWithValue("@Thang", Thang);
+                        cmd.Parameters.AddWithValue("@Nam", Nam);
+                        cmd.Parameters.AddWithValue("@HeSoLuong", HeSoLuong);
+                        cmd.Parameters.AddWithValue("@PhuCapChucVu", PhuCapChucVu);
+                        cmd.Parameters.AddWithValue("@SoNgayLamViec", SoNgayLamViec);
+                        cmd.Parameters.AddWithValue("@SoNgayNghiCoPhep", SoNgayNghiCoPhep);
+                        cmd.Parameters.AddWithValue("@TienBaoHiemXaHoi", TienBaoHiemXaHoi);
+                        cmd.Parameters.AddWithValue("@TongLuong", TongLuong);
+
+                        // Thực thi câu lệnh
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        // Kiểm tra xem có thêm được dữ liệu không
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi thêm dữ liệu: " + ex.Message);
+                return false;
+            }
+        }
+        public bool EditQuanLyLuongNhanVienData(
+            string LuongID,
+    string MSNV,
+    int? Thang = null,
+    int? Nam = null,
+    decimal? HeSoLuong = null,
+    decimal? PhuCapChucVu = null,
+    int? SoNgayLamViec = null,
+    int? SoNgayNghiCoPhep = null,
+    decimal? TienBaoHiemXaHoi = null,
+    decimal? TongLuong = null)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = @"
+                UPDATE QuanLyLuongNhanVien
+                SET 
+                    Thang = ISNULL(@Thang, Thang),
+                    Nam = ISNULL(@Nam, Nam),
+                    HeSoLuong = ISNULL(@HeSoLuong, HeSoLuong),
+                    PhuCapChucVu = ISNULL(@PhuCapChucVu, PhuCapChucVu),
+                    SoNgayLamViec = ISNULL(@SoNgayLamViec, SoNgayLamViec),
+                    SoNgayNghiCoPhep = ISNULL(@SoNgayNghiCoPhep, SoNgayNghiCoPhep),
+TienBaoHiemXaHoi = ISNULL(@TienBaoHiemXaHoi, TienBaoHiemXaHoi),
+                    TongLuong = ISNULL(@TongLuong, TongLuong)
+                WHERE LuongID = @LuongID";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        // Gán giá trị tham số
+                        cmd.Parameters.AddWithValue("@LuongID", LuongID);
+
+                        // Kiểm tra giá trị null và gán giá trị
+                        cmd.Parameters.AddWithValue("@Thang", (object)Thang ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Nam", (object)Nam ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@HeSoLuong", (object)HeSoLuong ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@PhuCapChucVu", (object)PhuCapChucVu ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@SoNgayLamViec", (object)SoNgayLamViec ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@SoNgayNghiCoPhep", (object)SoNgayNghiCoPhep ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@TienBaoHiemXaHoi", (object)TienBaoHiemXaHoi ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@TongLuong", (object)TongLuong ?? DBNull.Value);
+
+                        // Thực thi câu lệnh
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        // Trả về true nếu có ít nhất 1 dòng được cập nhật
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật dữ liệu: " + ex.Message);
+                return false;
+            }
+        }
+        public DataTable SearchQuanLyLuongNhanVien(string keyword)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    // Câu lệnh SQL với LIKE để tìm kiếm trong tất cả các cột
+                    string query = @"
+                SELECT *
+                FROM QuanLyLuongNhanVien
+                WHERE (CAST(LuongID AS NVARCHAR) LIKE '%' + @Keyword + '%'
+                    OR MSNV LIKE '%' + @Keyword + '%'
+                    OR CAST(Thang AS NVARCHAR) LIKE '%' + @Keyword + '%'
+                    OR CAST(Nam AS NVARCHAR) LIKE '%' + @Keyword + '%'
+                    OR CAST(HeSoLuong AS NVARCHAR) LIKE '%' + @Keyword + '%'
+                    OR CAST(PhuCapChucVu AS NVARCHAR) LIKE '%' + @Keyword + '%'
+                    OR CAST(SoNgayLamViec AS NVARCHAR) LIKE '%' + @Keyword + '%'
+                    OR CAST(SoNgayNghiCoPhep AS NVARCHAR) LIKE '%' + @Keyword + '%'
+                    OR CAST(TienBaoHiemXaHoi AS NVARCHAR) LIKE '%' + @Keyword + '%'
+                    OR CAST(TongLuong AS NVARCHAR) LIKE '%' + @Keyword + '%')";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        // Gắn giá trị tham số
+                        cmd.Parameters.AddWithValue("@Keyword", keyword);
+
+                        // Thực thi câu lệnh
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        DataTable resultTable = new DataTable();
+                        adapter.Fill(resultTable);
+
+                        return resultTable;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message);
+                return null;
+            }
+        }
+        public bool DeleteLuongNhanVienById(int luongID)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = "DELETE FROM QuanLyLuongNhanVien WHERE LuongID = @LuongID";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@LuongID", luongID);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        return rowsAffected > 0; // Trả về true nếu có ít nhất một bản ghi bị xóa
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xóa dữ liệu: " + ex.Message);
+                return false;
+            }
+        }
 
     }
 }

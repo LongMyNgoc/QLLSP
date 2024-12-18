@@ -100,3 +100,72 @@ VALUES
 (2, 'Khô heo', '700.000đ', 5, 'Chưa thực hiện', 'HD001'),
 (3, 'chổi ', '15.000đ', 50, 'Hoàn thành', 'HD002'),
 (4, 'Nồi', '100.000đ', 30, 'Đang thực hiện', 'HD002');
+
+CREATE TABLE QuanLyLuongNhanVien (
+    LuongID INT IDENTITY(1,1) PRIMARY KEY,   -- Mã lương (khóa chính tự động tăng)
+    MSNV NVARCHAR(20) NOT NULL,             -- Mã số nhân viên (liên kết với bảng NhanVien)
+    Thang INT CHECK (Thang BETWEEN 1 AND 12) NOT NULL, -- Tháng tính lương (1-12)
+    Nam INT CHECK (Nam > 2000) NOT NULL,             -- Năm tính lương
+    HeSoLuong FLOAT CHECK (HeSoLuong > 0),  -- Hệ số lương
+    PhuCapChucVu FLOAT DEFAULT 0,           -- Phụ cấp chức vụ
+    SoNgayLamViec INT CHECK (SoNgayLamViec >= 0), -- Số ngày làm việc thực tế
+    SoNgayNghiCoPhep INT CHECK (SoNgayNghiCoPhep >= 0), -- Ngày nghỉ có phép
+    TienBaoHiemXaHoi FLOAT DEFAULT 0,       -- Tiền bảo hiểm xã hội
+    TongLuong FLOAT,                        -- Tổng lương sau khi tính
+    FOREIGN KEY (MSNV) REFERENCES NhanVien(MSNV) -- Ràng buộc khóa ngoại
+);
+
+CREATE TRIGGER TinhLuongNhanVien
+ON QuanLyLuongNhanVien
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    DECLARE @DonGiaNgay FLOAT = 200000; -- Đơn giá một ngày làm việc
+    DECLARE @DonGiaBaoHiem FLOAT = 100000; -- Đơn giá bảo hiểm xã hội mỗi ngày
+
+    UPDATE ql
+    SET ql.TongLuong = (ql.HeSoLuong * ql.SoNgayLamViec * @DonGiaNgay)  -- Lương cơ bản
+                      + (ql.SoNgayNghiCoPhep * @DonGiaBaoHiem)         -- Tiền bảo hiểm xã hội
+                      + ql.PhuCapChucVu                                -- Phụ cấp chức vụ
+    FROM QuanLyLuongNhanVien ql
+    JOIN inserted i ON ql.LuongID = i.LuongID; -- Chỉ cập nhật các bản ghi được thêm hoặc sửa đổi
+END;
+
+INSERT INTO QuanLyLuongNhanVien (MSNV, Thang, Nam, HeSoLuong, PhuCapChucVu, SoNgayLamViec, SoNgayNghiCoPhep)
+VALUES 
+('NV001', 12, 2024, 3.5, 500000, 20, 2), 
+('NV002', 12, 2024, 4.0, 800000, 22, 3);
+
+CREATE TABLE LuongCongNhan (
+    MSLuong NVARCHAR(20) PRIMARY KEY,
+    SoCa INT,
+    CaToi INT,
+    CaCN INT,
+    CongDoan NVARCHAR(50),
+    TongLuong Int,
+    MSCN NVARCHAR(20) UNIQUE, 
+    FOREIGN KEY (MSCN) REFERENCES CongNhan(MSCN)
+);
+INSERT INTO LuongCongNhan (MSLuong, SoCa, CaToi, CaCN, CongDoan, TongLuong, MSCN)
+VALUES
+('L001', 30, 10, 20, '4', 15000000.00, 'CN001'),
+('L002', 25, 15, 10, '3', 12000000.00, 'CN002'),
+('L003', 40, 10, 30, '2', 18000000.00, 'CN003');
+
+CREATE TABLE CongNhan_SanPham (
+    MSCN NVARCHAR(20),  
+    MaSanPham INT,     
+    SoLuong INT ,
+    PRIMARY KEY (MSCN, MaSanPham),
+    FOREIGN KEY (MSCN) REFERENCES CongNhan(MSCN),
+    FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham)
+);
+
+INSERT INTO CongNhan_SanPham (MSCN, MaSanPham, SoLuong)
+VALUES
+('CN001', 1, 5),  -- Nguyễn Văn C làm Khô gà xé
+('CN001', 2, 3),  -- Nguyễn Văn C làm Khô heo
+('CN002', 3, 20), -- Trần Thị D làm Chổi
+('CN002', 4, 15), -- Trần Thị D làm Nồi
+('CN003', 3, 25), -- Phạm Văn E làm Chổi
+('CN003', 4, 10); -- Phạm Văn E làm Nồi

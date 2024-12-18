@@ -76,10 +76,12 @@ namespace QLLSP
                 btnQLNV.Hide();
                 btnQLSP.Hide();
                 btnQLCN.Hide();
+                btnQLLCN.Hide();
             }
             else if(firstTwoChars == "NV")
             {
                 btnQLNV.Hide();
+                btnQLLNV.Hide();
             }    
         }
 
@@ -112,6 +114,18 @@ namespace QLLSP
         {
             QLSP qLSP = new QLSP();
             AddForm(qLSP);
+        }
+
+        private void btnQLLNV_Click(object sender, EventArgs e)
+        {
+            frmQLLNV frmQLLNV = new frmQLLNV();
+            AddForm(frmQLLNV);
+        }
+
+        private void btnQLLCN_Click(object sender, EventArgs e)
+        {
+            frmQLHD frmQLHD = new frmQLHD();
+            AddForm(frmQLHD);
         }
     }
 }
