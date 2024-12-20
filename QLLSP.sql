@@ -29,7 +29,6 @@ VALUES
 ('NV001', 'password123', N'Nguyễn Văn A', N'Nam', '1990-01-01', '2015-06-15', N'Phòng Kinh Doanh', 220, 12, 10, 15, N'Trưởng phòng', N'Thạc sĩ Quản trị Kinh doanh', N'Tiếng Anh C1'),
 ('NV002', 'qwerty', N'Trần Thị B', N'Nữ', '1992-03-15', '2018-01-10', N'Phòng Kế Toán', 230, 8, 5, 20, N'Nhân viên', N'Cử nhân Kế toán', N'Tiếng Anh B2');
 
--- Tạo bảng CongNhan
 CREATE TABLE CongNhan (
     MSCN NVARCHAR(20) PRIMARY KEY,         -- Mã số công nhân (khóa chính)
     MatKhau NVARCHAR(255) NOT NULL,        -- Mật khẩu (đã mã hóa)
@@ -40,16 +39,14 @@ CREATE TABLE CongNhan (
     DonViLamViec NVARCHAR(100),            -- Đơn vị làm việc
     TenSanPham NVARCHAR(100),              -- Tên sản phẩm sản xuất
     SoLanHoanThanh INT CHECK (SoLanHoanThanh >= 0), -- Số lần hoàn thành công đoạn
-    CongDoan NVARCHAR(50),                 -- Công đoạn làm việc (ví dụ: "Hàn", "Sơn")
-    CaLamViec NVARCHAR(10) CHECK (CaLamViec IN (N'Ca sáng', N'Ca chiều', N'Ca tối')) -- Loại ca làm việc
+    TongCongDoan INT CHECK (TongCongDoan >= 0),                 
+    TongCaLamViec INT CHECK (TongCaLamViec >= 0), -- Loại ca làm việc
 );
-
--- Chèn dữ liệu mẫu vào bảng CongNhan
-INSERT INTO CongNhan (MSCN, MatKhau, HoTen, GioiTinh, NgaySinh, NgayBatDauCongTac, DonViLamViec, TenSanPham, SoLanHoanThanh, CongDoan, CaLamViec)
+INSERT INTO CongNhan (MSCN, MatKhau, HoTen, GioiTinh, NgaySinh, DonViLamViec, TenSanPham, SoLanHoanThanh, TongCongDoan, TongCaLamViec)
 VALUES 
-('CN001', 'password123', N'Nguyễn Văn C', N'Nam', '1990-01-15', '2024-01-01', N'Phân xưởng A', N'Tủ điện', 120, N'Gia công cơ khí', N'Ca sáng'),
-('CN002', 'password456', N'Trần Thị D', N'Nữ', '1995-06-20', '2024-06-01', N'Phân xưởng B', N'Máy bơm nước', 80, N'Đóng gói', N'Ca tối'),
-('CN003', 'password789', N'Phạm Văn E', N'Nam', '1985-12-25', '2023-05-01', N'Phân xưởng C', N'Máy lọc nước', 150, N'Lắp ráp', N'Ca chiều');
+    (N'CN001', N'123456', N'Nguyễn Văn A', N'Nam', '1990-01-15', N'Phân xưởng A', N'Sản phẩm X', 20, 5, 10),
+    (N'CN002', N'abcdef', N'Lê Thị B', N'Nữ', '1985-08-20', N'Phân xưởng B', N'Sản phẩm Y', 15, 3, 8),
+    (N'CN003', N'pass123', N'Phạm Văn C', N'Nam', '1992-05-10', N'Phân xưởng C', N'Sản phẩm Z', 30, 7, 12);
 
 
 CREATE TABLE QuanLy (
@@ -137,20 +134,13 @@ VALUES
 ('NV002', 12, 2024, 4.0, 800000, 22, 3);
 
 CREATE TABLE LuongCongNhan (
-    MSLuong NVARCHAR(20) PRIMARY KEY,
+    MSLuong INT IDENTITY(1,1) PRIMARY KEY,
     SoCa INT,
-    CaToi INT,
-    CaCN INT,
     CongDoan NVARCHAR(50),
     TongLuong Int,
     MSCN NVARCHAR(20) UNIQUE, 
     FOREIGN KEY (MSCN) REFERENCES CongNhan(MSCN)
 );
-INSERT INTO LuongCongNhan (MSLuong, SoCa, CaToi, CaCN, CongDoan, TongLuong, MSCN)
-VALUES
-('L001', 30, 10, 20, '4', 15000000.00, 'CN001'),
-('L002', 25, 15, 10, '3', 12000000.00, 'CN002'),
-('L003', 40, 10, 30, '2', 18000000.00, 'CN003');
 
 CREATE TABLE CongNhan_SanPham (
     MSCN NVARCHAR(20),  
@@ -160,12 +150,3 @@ CREATE TABLE CongNhan_SanPham (
     FOREIGN KEY (MSCN) REFERENCES CongNhan(MSCN),
     FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham)
 );
-
-INSERT INTO CongNhan_SanPham (MSCN, MaSanPham, SoLuong)
-VALUES
-('CN001', 1, 5),  -- Nguyễn Văn C làm Khô gà xé
-('CN001', 2, 3),  -- Nguyễn Văn C làm Khô heo
-('CN002', 3, 20), -- Trần Thị D làm Chổi
-('CN002', 4, 15), -- Trần Thị D làm Nồi
-('CN003', 3, 25), -- Phạm Văn E làm Chổi
-('CN003', 4, 10); -- Phạm Văn E làm Nồi

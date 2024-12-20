@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCLV = new System.Windows.Forms.TextBox();
-            this.lbCLV = new System.Windows.Forms.Label();
+            this.txtTCLV = new System.Windows.Forms.TextBox();
+            this.lbTCLV = new System.Windows.Forms.Label();
             this.txtSLHT = new System.Windows.Forms.TextBox();
             this.lbSLHT = new System.Windows.Forms.Label();
-            this.txtCD = new System.Windows.Forms.TextBox();
-            this.lbCD = new System.Windows.Forms.Label();
+            this.txtTCD = new System.Windows.Forms.TextBox();
+            this.lbTCD = new System.Windows.Forms.Label();
             this.txtTSP = new System.Windows.Forms.TextBox();
             this.lbTSP = new System.Windows.Forms.Label();
             this.txtDVLV = new System.Windows.Forms.TextBox();
@@ -53,25 +53,25 @@
             this.dtkNS = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
-            // txtCLV
+            // txtTCLV
             // 
-            this.txtCLV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCLV.Location = new System.Drawing.Point(756, 305);
-            this.txtCLV.Multiline = true;
-            this.txtCLV.Name = "txtCLV";
-            this.txtCLV.Size = new System.Drawing.Size(228, 31);
-            this.txtCLV.TabIndex = 68;
+            this.txtTCLV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTCLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTCLV.Location = new System.Drawing.Point(771, 305);
+            this.txtTCLV.Multiline = true;
+            this.txtTCLV.Name = "txtTCLV";
+            this.txtTCLV.Size = new System.Drawing.Size(228, 31);
+            this.txtTCLV.TabIndex = 68;
             // 
-            // lbCLV
+            // lbTCLV
             // 
-            this.lbCLV.AutoSize = true;
-            this.lbCLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCLV.Location = new System.Drawing.Point(574, 311);
-            this.lbCLV.Name = "lbCLV";
-            this.lbCLV.Size = new System.Drawing.Size(136, 25);
-            this.lbCLV.TabIndex = 67;
-            this.lbCLV.Text = "Ca Làm Việc";
+            this.lbTCLV.AutoSize = true;
+            this.lbTCLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTCLV.Location = new System.Drawing.Point(573, 311);
+            this.lbTCLV.Name = "lbTCLV";
+            this.lbTCLV.Size = new System.Drawing.Size(192, 25);
+            this.lbTCLV.TabIndex = 67;
+            this.lbTCLV.Text = "Tổng Ca Làm Việc";
             // 
             // txtSLHT
             // 
@@ -93,31 +93,31 @@
             this.lbSLHT.TabIndex = 65;
             this.lbSLHT.Text = "Số Lần Hoàn Thành";
             // 
-            // txtCD
+            // txtTCD
             // 
-            this.txtCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCD.Location = new System.Drawing.Point(756, 250);
-            this.txtCD.Multiline = true;
-            this.txtCD.Name = "txtCD";
-            this.txtCD.Size = new System.Drawing.Size(228, 31);
-            this.txtCD.TabIndex = 64;
+            this.txtTCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTCD.Location = new System.Drawing.Point(771, 250);
+            this.txtTCD.Multiline = true;
+            this.txtTCD.Name = "txtTCD";
+            this.txtTCD.Size = new System.Drawing.Size(228, 31);
+            this.txtTCD.TabIndex = 64;
             // 
-            // lbCD
+            // lbTCD
             // 
-            this.lbCD.AutoSize = true;
-            this.lbCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCD.Location = new System.Drawing.Point(574, 256);
-            this.lbCD.Name = "lbCD";
-            this.lbCD.Size = new System.Drawing.Size(121, 25);
-            this.lbCD.TabIndex = 63;
-            this.lbCD.Text = "Công Đoạn";
+            this.lbTCD.AutoSize = true;
+            this.lbTCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTCD.Location = new System.Drawing.Point(574, 256);
+            this.lbTCD.Name = "lbTCD";
+            this.lbTCD.Size = new System.Drawing.Size(177, 25);
+            this.lbTCD.TabIndex = 63;
+            this.lbTCD.Text = "Tổng Công Đoạn";
             // 
             // txtTSP
             // 
             this.txtTSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTSP.Location = new System.Drawing.Point(756, 197);
+            this.txtTSP.Location = new System.Drawing.Point(771, 197);
             this.txtTSP.Multiline = true;
             this.txtTSP.Name = "txtTSP";
             this.txtTSP.Size = new System.Drawing.Size(228, 31);
@@ -228,7 +228,7 @@
             this.btnDMK.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnDMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDMK.ForeColor = System.Drawing.Color.White;
-            this.btnDMK.Location = new System.Drawing.Point(824, 384);
+            this.btnDMK.Location = new System.Drawing.Point(839, 384);
             this.btnDMK.Name = "btnDMK";
             this.btnDMK.Size = new System.Drawing.Size(160, 73);
             this.btnDMK.TabIndex = 50;
@@ -295,12 +295,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1011, 474);
             this.Controls.Add(this.dtkNS);
-            this.Controls.Add(this.txtCLV);
-            this.Controls.Add(this.lbCLV);
+            this.Controls.Add(this.txtTCLV);
+            this.Controls.Add(this.lbTCLV);
             this.Controls.Add(this.txtSLHT);
             this.Controls.Add(this.lbSLHT);
-            this.Controls.Add(this.txtCD);
-            this.Controls.Add(this.lbCD);
+            this.Controls.Add(this.txtTCD);
+            this.Controls.Add(this.lbTCD);
             this.Controls.Add(this.txtTSP);
             this.Controls.Add(this.lbTSP);
             this.Controls.Add(this.txtDVLV);
@@ -325,12 +325,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtCLV;
-        private System.Windows.Forms.Label lbCLV;
+        private System.Windows.Forms.TextBox txtTCLV;
+        private System.Windows.Forms.Label lbTCLV;
         private System.Windows.Forms.TextBox txtSLHT;
         private System.Windows.Forms.Label lbSLHT;
-        private System.Windows.Forms.TextBox txtCD;
-        private System.Windows.Forms.Label lbCD;
+        private System.Windows.Forms.TextBox txtTCD;
+        private System.Windows.Forms.Label lbTCD;
         private System.Windows.Forms.TextBox txtTSP;
         private System.Windows.Forms.Label lbTSP;
         private System.Windows.Forms.TextBox txtDVLV;

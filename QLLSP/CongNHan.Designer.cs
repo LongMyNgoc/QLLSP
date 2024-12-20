@@ -64,6 +64,7 @@
             this.cbcd1 = new System.Windows.Forms.CheckBox();
             this.cbcd2 = new System.Windows.Forms.CheckBox();
             this.cbcd3 = new System.Windows.Forms.CheckBox();
+            this.btnSLCN = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtCongNhan)).BeginInit();
             this.SuspendLayout();
@@ -385,11 +386,22 @@
             this.cbcd3.TabIndex = 48;
             this.cbcd3.UseVisualStyleBackColor = true;
             // 
+            // btnSLCN
+            // 
+            this.btnSLCN.Location = new System.Drawing.Point(12, 458);
+            this.btnSLCN.Name = "btnSLCN";
+            this.btnSLCN.Size = new System.Drawing.Size(122, 67);
+            this.btnSLCN.TabIndex = 49;
+            this.btnSLCN.Text = "Show Lương Công Nhân";
+            this.btnSLCN.UseVisualStyleBackColor = true;
+            this.btnSLCN.Click += new System.EventHandler(this.btnSLCN_Click);
+            // 
             // CongNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(801, 537);
+            this.Controls.Add(this.btnSLCN);
             this.Controls.Add(this.cbcd3);
             this.Controls.Add(this.cbcd2);
             this.Controls.Add(this.cbcd1);
@@ -473,5 +485,6 @@
         private System.Windows.Forms.CheckBox cbcd1;
         private System.Windows.Forms.CheckBox cbcd2;
         private System.Windows.Forms.CheckBox cbcd3;
+        private System.Windows.Forms.Button btnSLCN;
     }
 }

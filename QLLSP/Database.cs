@@ -207,7 +207,7 @@ namespace QLSinhVien
                 {
                     conn.Open();
 
-                    string query = "SELECT MSCN, MatKhau, HoTen, GioiTinh, NgaySinh, NgayBatDauCongTac, DonViLamViec, TenSanPham, SoLanHoanThanh, CongDoan, CaLamViec FROM CongNhan";
+                    string query = "SELECT MSCN, MatKhau, HoTen, GioiTinh, NgaySinh, NgayBatDauCongTac, DonViLamViec, TenSanPham, SoLanHoanThanh, TongCongDoan, TongCaLamViec FROM CongNhan";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
@@ -385,8 +385,8 @@ namespace QLSinhVien
     out string donViLamViec,
     out string tenSanPham,
     out int soLanHoanThanh,
-    out string congDoan,
-    out string caLamViec)
+    out int congDoan,
+    out int caLamViec)
         {
             // Khởi tạo giá trị mặc định
             hoTen = string.Empty;
@@ -396,8 +396,8 @@ namespace QLSinhVien
             donViLamViec = string.Empty;
             tenSanPham = string.Empty;
             soLanHoanThanh = 0;
-            congDoan = string.Empty;
-            caLamViec = string.Empty;
+            congDoan = 0;
+            caLamViec = 0;
 
             try
             {
@@ -410,7 +410,7 @@ namespace QLSinhVien
             SELECT 
                 HoTen, GioiTinh, NgaySinh, NgayBatDauCongTac, 
                 DonViLamViec, TenSanPham, SoLanHoanThanh, 
-                CongDoan, CaLamViec
+                TongCongDoan, TongCaLamViec
             FROM CongNhan 
             WHERE MSCN = @MSCN";
 
@@ -431,8 +431,8 @@ namespace QLSinhVien
                                 donViLamViec = reader["DonViLamViec"]?.ToString() ?? string.Empty;
                                 tenSanPham = reader["TenSanPham"]?.ToString() ?? string.Empty;
                                 soLanHoanThanh = reader["SoLanHoanThanh"] != DBNull.Value ? Convert.ToInt32(reader["SoLanHoanThanh"]) : 0;
-                                congDoan = reader["CongDoan"]?.ToString() ?? string.Empty;
-                                caLamViec = reader["CaLamViec"]?.ToString() ?? string.Empty;
+                                congDoan = reader["TongCongDoan"] != DBNull.Value ? Convert.ToInt32(reader["TongCongDoan"]) : 0;
+                                caLamViec = reader["TongCaLamViec"] != DBNull.Value ? Convert.ToInt32(reader["TongCaLamViec"]) : 0;
                             }
                             else
                             {
@@ -584,7 +584,7 @@ namespace QLSinhVien
             }
         }
         public bool EditCongNhan(string msCn, string strHoten, string strGioitinh, string strNgaySinh, string strNgayBatDauCongTac,
-            string strDonViLamViec, string strTenSanPham, int soLanHoanThanh, string strCongDoan, string strCaLamViec)
+            string strDonViLamViec, string strTenSanPham, int soLanHoanThanh, int strCongDoan, int strCaLamViec)
         {
             try
             {
@@ -602,8 +602,8 @@ namespace QLSinhVien
                 DonViLamViec = @DonViLamViec, 
                 TenSanPham = @TenSanPham, 
                 SoLanHoanThanh = @SoLanHoanThanh, 
-                CongDoan = @CongDoan, 
-                CaLamViec = @CaLamViec
+                TongCongDoan = @CongDoan, 
+                TongCaLamViec = @CaLamViec
             WHERE 
                 MSCN = @MSCN";
 
@@ -725,7 +725,7 @@ namespace QLSinhVien
         }
         public bool InsertCongNhan(string mscn, string matKhau, string hoTen,
                            string donViLamViec = null, string tenSanPham = null,
-                           int? soLanHoanThanh = null, string congDoan = null, string caLamViec = null)
+                           int? soLanHoanThanh = null, int? congDoan = null, int? caLamViec = null)
         {
             // Kiểm tra các giá trị đầu vào bắt buộc
             if (string.IsNullOrWhiteSpace(mscn) || string.IsNullOrWhiteSpace(matKhau) || string.IsNullOrWhiteSpace(hoTen))
@@ -746,7 +746,7 @@ namespace QLSinhVien
                     // Câu lệnh SQL để chèn dữ liệu
                     string query = @"
             INSERT INTO CongNhan (MSCN, MatKhau, HoTen, GioiTinh, NgaySinh, DonViLamViec, 
-                                  TenSanPham, SoLanHoanThanh, CongDoan, CaLamViec)
+                                  TenSanPham, SoLanHoanThanh, TongCongDoan, TongCaLamViec)
             VALUES (@MSCN, @MatKhau, @HoTen, @GioiTinh, @NgaySinh, 
                     @DonViLamViec, @TenSanPham, @SoLanHoanThanh, @CongDoan, @CaLamViec)";
 
@@ -1075,7 +1075,32 @@ TienBaoHiemXaHoi = ISNULL(@TienBaoHiemXaHoi, TienBaoHiemXaHoi),
                 return false;
             }
         }
+        public DataTable GetLuongCongNhanData()
+        {
+            DataTable dataTable = new DataTable();
 
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = "SELECT MSLuong, SoCa, CongDoan, TongLuong, MSCN FROM LuongCongNhan ";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dataTable); // Đổ dữ liệu vào DataTable
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi lấy dữ liệu: " + ex.Message);
+            }
+
+            return dataTable;
+        }
     }
 }
 

@@ -33,7 +33,8 @@ namespace QLLSP
         }
         private void getData()
         {
-            string hoTen, gioiTinh, donViLamViec, tenSanPham, congDoan, caLamViec;
+            string hoTen, gioiTinh, donViLamViec, tenSanPham;
+            int congDoan, caLamViec;
             DateTime ngaySinh, ngayBatDauCongTac;
             int soLanHoanThanh;
 
@@ -46,15 +47,15 @@ namespace QLLSP
             txtDVLV.Text = donViLamViec;
             txtTSP.Text = tenSanPham;
             txtSLHT.Text = soLanHoanThanh.ToString();
-            txtCD.Text = congDoan;
-            txtCLV.Text = caLamViec;
+            txtTCD.Text = congDoan.ToString();
+            txtTCLV.Text = caLamViec.ToString();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             string strHoten, strGioitinh, strNgaySinh, strNgayBatDauCongTac, strDonViLamViec, strTenSanPham;
             int soLanHoanThanh;
-            string strCongDoan, strCaLamViec;
+            int strCongDoan, strCaLamViec;
             strHoten = txtHT.Text;
             strGioitinh = txtGT.Text;
             strNgaySinh = dtkNS.Value.ToString();
@@ -62,8 +63,8 @@ namespace QLLSP
             strDonViLamViec = txtDVLV.Text;
             strTenSanPham = txtTSP.Text;
             soLanHoanThanh = int.Parse(txtSLHT.Text);
-            strCongDoan = txtCD.Text;
-            strCaLamViec = txtCLV.Text;
+            strCongDoan = int.Parse(txtTCD.Text);
+            strCaLamViec = int.Parse(txtTCLV.Text);
             if(database.EditCongNhan(_msnv,strHoten,strGioitinh,strNgaySinh,strNgayBatDauCongTac,strDonViLamViec,strTenSanPham,soLanHoanThanh,strCongDoan,strCaLamViec))
             {
                 MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

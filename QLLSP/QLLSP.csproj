@@ -53,12 +53,6 @@
       <DependentUpon>CongNHan.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmCNInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,11 +95,11 @@
     <Compile Include="frmQLCN.Designer.cs">
       <DependentUpon>frmQLCN.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQLHD.cs">
+    <Compile Include="frmQLLCN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQLHD.Designer.cs">
-      <DependentUpon>frmQLHD.cs</DependentUpon>
+    <Compile Include="frmQLLCN.Designer.cs">
+      <DependentUpon>frmQLLCN.cs</DependentUpon>
     </Compile>
     <Compile Include="frmQLLNV.cs">
       <SubType>Form</SubType>
@@ -152,9 +146,6 @@
     <EmbeddedResource Include="CongNHan.resx">
       <DependentUpon>CongNHan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmCNInformation.resx">
       <DependentUpon>frmCNInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,8 +167,8 @@
     <EmbeddedResource Include="frmQLCN.resx">
       <DependentUpon>frmQLCN.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQLHD.resx">
-      <DependentUpon>frmQLHD.cs</DependentUpon>
+    <EmbeddedResource Include="frmQLLCN.resx">
+      <DependentUpon>frmQLLCN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLLNV.resx">
       <DependentUpon>frmQLLNV.cs</DependentUpon>

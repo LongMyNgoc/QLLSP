@@ -77,10 +77,10 @@ namespace QLLSP
             string mscn = txtMCN.Text.Trim();
             string matKhau = txtMK.Text.Trim();
             string hoTen = txtHT.Text.Trim();
-            string congDoan = txtCD.Text.Trim();
+            int congDoan = int.Parse(txtCD.Text.Trim());
             string sanPham = txtSP.Text.Trim();
             string donVi = txtDV.Text.Trim();
-            string caLamViec = txtCLV.Text.Trim();
+            int caLamViec = int.Parse(txtCLV.Text.Trim());
 
             int? soLanHoanThanh = null;
             if (!string.IsNullOrEmpty(txtSLHT.Text.Trim()) && int.TryParse(txtSLHT.Text.Trim(), out int parsedValue))
@@ -104,14 +104,15 @@ namespace QLLSP
         {
             string mscn;
             mscn = txtMCN.Text.Trim();
-            string hoTen, gioiTinh, donViLamViec, tenSanPham, congDoan, caLamViec;
+            string hoTen, gioiTinh, donViLamViec, tenSanPham;
+            int congDoan, caLamViec;
             DateTime ngaySinh, ngayBatDauCongTac;
             int soLanHoanThanh;
             database.GetCongNhanData(mscn, out hoTen, out gioiTinh, out ngaySinh, out ngayBatDauCongTac,
                 out donViLamViec, out tenSanPham, out soLanHoanThanh, out congDoan, out caLamViec);
             txtHT.Text = hoTen;
-            txtCD.Text = congDoan;
-            txtCLV.Text = caLamViec;
+            txtCD.Text = congDoan.ToString();
+            txtCLV.Text = caLamViec.ToString();
             txtDV.Text = donViLamViec;
             txtSLHT.Text = soLanHoanThanh.ToString();
             txtSP.Text = tenSanPham;
@@ -135,17 +136,17 @@ namespace QLLSP
             mscn = txtMCN.Text.Trim();
             string strHoten, strGioitinh, strDonViLamViec, strTenSanPham;
             int soLanHoanThanh;
-            string strCongDoan, strCaLamViec;
+            int strCongDoan, strCaLamViec;
             DateTime strNgaySinh, strNgayBatDauCongTac;
             database.GetCongNhanData(mscn, out strHoten, out strGioitinh, out strNgaySinh, out strNgayBatDauCongTac,
                 out strDonViLamViec, out strTenSanPham, out soLanHoanThanh, out strCongDoan, out strCaLamViec);
             string ngaySinhString = strNgaySinh.ToString("yyyy-MM-dd");
             string ngayBatDauCongTacString = strNgayBatDauCongTac.ToString("yyyy-MM-dd");
             strHoten = txtHT.Text.Trim();
-            strCongDoan = txtCD.Text.Trim();
+            strCongDoan = int.Parse(txtCD.Text.Trim());
             strTenSanPham = txtSP.Text.Trim();
             strDonViLamViec = txtDV.Text.Trim();
-            strCaLamViec = txtCLV.Text.Trim();
+            strCaLamViec = int.Parse(txtCLV.Text.Trim());
             soLanHoanThanh = int.Parse(txtSLHT.Text.Trim());
             string strMatKhau = txtMK.Text.Trim();
             if (database.EditCongNhan(mscn, strHoten, strGioitinh, ngaySinhString, ngayBatDauCongTacString, strDonViLamViec, strTenSanPham, soLanHoanThanh, strCongDoan, strCaLamViec) && database.EditMKCN(mscn, strMatKhau))

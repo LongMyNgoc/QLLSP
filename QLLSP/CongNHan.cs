@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,7 @@ namespace QLLSP
         SqlCommand cmd;
         DataTable dt = new DataTable();
         string query;
+        long TongLuong;
         private void LoadDataCN()
         {
             try
@@ -102,14 +104,11 @@ namespace QLLSP
                 {
                     string query = @"
                 SELECT 
-                    MSCN, 
-                    SUM(SoLuong) AS TongSoLuong
+                    SoLanHoanThanh
                 FROM 
-                    CongNhan_SanPham
+                    CongNhan
                 WHERE
                     MSCN = @MSCN
-                GROUP BY 
-                    MSCN;
             ";
 
                     using (SqlConnection conn = new SqlConnection(connectstring))
@@ -171,6 +170,7 @@ namespace QLLSP
                     return;
                 }
                 MessageBox.Show($"Lương của công nhân: {tongLuong:N0} VND", "Tính Lương Thành Công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TongLuong = tongLuong;
             }
             catch (Exception ex)
             {
@@ -215,9 +215,57 @@ namespace QLLSP
             txtDvlamviec.Text = dtCongNhan.Rows[i].Cells[6].Value.ToString();
             txtTensp.Text = dtCongNhan.Rows[i].Cells[7].Value.ToString();
             txtSlhoanthanh.Text = dtCongNhan.Rows[i].Cells[8].Value.ToString();
-            cbcongdoan1.Text = dtCongNhan.Rows[i].Cells[9].Value.ToString();
-            cbcongdoan2.Text = dtCongNhan.Rows[i].Cells[9].Value.ToString();
-            cbcongdoan3.Text = dtCongNhan.Rows[i].Cells[9].Value.ToString();
+            int TongCaLam, TongCongDoan;
+            TongCaLam = int.Parse(dtCongNhan.Rows[i].Cells[10].Value.ToString());
+            TongCongDoan = int.Parse(dtCongNhan.Rows[i].Cells[9].Value.ToString());
+            if (TongCongDoan == 2)
+            {
+                cbcongdoan1.Checked = true;
+                cbcongdoan2.Checked = true;
+                cbcongdoan3.Checked = false;
+            }   
+            else if (TongCongDoan == 1)
+            {
+                cbcongdoan1.Checked = true;
+                cbcongdoan2.Checked = false;
+                cbcongdoan3.Checked = false;
+            }
+            else if(TongCongDoan == 3)
+            {
+                cbcongdoan1.Checked = true;
+                cbcongdoan2.Checked = true;
+                cbcongdoan3.Checked = true;
+            }  
+            else
+            {
+                cbcongdoan1.Checked = false;
+                cbcongdoan2.Checked = false;
+                cbcongdoan3.Checked = false;
+            }
+            if (TongCaLam == 2)
+            {
+                cbcd1.Checked = true;
+                cbcd2.Checked = true;
+                cbcd3.Checked = false;
+            }
+            else if (TongCongDoan == 1)
+            {
+                cbcd1.Checked = true;
+                cbcd2.Checked = false;
+                cbcd3.Checked = false;
+            }
+            else if(TongCaLam == 3)
+            {
+                cbcd1.Checked = true;
+                cbcd2.Checked = true;
+                cbcd3.Checked = true;
+            }  
+            else
+            {
+                cbcd1.Checked = false;
+                cbcd2.Checked = false;
+                cbcd3.Checked = false;
+            }    
             cbcd1.Text = dtCongNhan.Rows[i].Cells[10].Value.ToString();
             cbcd2.Text = dtCongNhan.Rows[i].Cells[10].Value.ToString();
             cbcd3.Text = dtCongNhan.Rows[i].Cells[10].Value.ToString();
@@ -242,6 +290,7 @@ namespace QLLSP
         private void button1_Click_1(object sender, EventArgs e)
         {
             TinhLuongCongNhan();
+            SaveLuongCongNhanToDatabase();
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -287,17 +336,13 @@ namespace QLLSP
             NgayBatDauCongTac = @NgayBatDauCongTac, 
             DonViLamViec = @DonViLamViec, 
             TenSanPham = @TenSanPham, 
-            SoLuongHoanThanh = @SoLuongHoanThanh, 
-            TongcongDoan = @TongcongDoan,
-            Tongcalamviec = @Tongcalamviec
+            SoLanHoanThanh = @SoLuongHoanThanh, 
+            TongCongDoan = @TongcongDoan,
+            TongCaLamViec = @Tongcalamviec
         WHERE 
             MSCN = @OldMSCN;
 
-        UPDATE CongNhan_SanPham 
-        SET 
-            SoLuong = @SoLuongHoanThanh
-        WHERE 
-            MSCN = @OldMSCN;";
+        ";
 
                 if (!int.TryParse(txtSlhoanthanh.Text, out int soLuong))
                 {
@@ -371,7 +416,7 @@ namespace QLLSP
                 }
 
 
-                string query = @"INSERT INTO CongNhan (MSCN, MatKhau, HoTen, GioiTinh, NgaySinh, NgayBatDauCongTac, DonViLamViec, TenSanPham, SoLuongHoanThanh, TongcongDoan) 
+                string query = @"INSERT INTO CongNhan (MSCN, MatKhau, HoTen, GioiTinh, NgaySinh, NgayBatDauCongTac, DonViLamViec, TenSanPham, SoLuongHoanThanh, TongCongDoan) 
                                  VALUES (@MSCN, @MatKhau, @HoTen, @GioiTinh, @NgaySinh, @NgayBatDauCongTac, @DonViLamViec, @TenSanPham, @SoLuongHoanThanh, @TongcongDoan)";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -427,6 +472,129 @@ namespace QLLSP
         private void label11_Click(object sender, EventArgs e)
         {
 
+        }
+        private void SaveLuongCongNhanToDatabase()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectstring))
+                {
+                    conn.Open();
+                    string query = @"
+             INSERT INTO LuongCongNhan 
+             (SoCa,CongDoan,TongLuong,MSCN) 
+             VALUES (@SoCa,@CongDoan,@TongLuong,@MSCN)";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@SoCa", tongca());
+                        cmd.Parameters.AddWithValue("@CongDoan", tongCD());
+                        cmd.Parameters.AddWithValue("@TongLuong", TongLuong);
+                        cmd.Parameters.AddWithValue("@MSCN", txtMscn.Text.Trim());
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Dữ liệu đã được lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadDataCN();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không có dòng nào được cập nhật. Vui lòng kiểm tra lại mã công nhân (MSCN)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi lưu dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private int tongca()
+        {
+            int tong = 0;
+            int Ca_1 = 1;
+            int Ca_2 = 1;
+            int Ca_3 = 1;
+            if (cbcd1.Checked)
+            {
+                tong = tong + Ca_1;
+            }
+            else if (cbcd2.Checked)
+            {
+                tong = tong + Ca_2;
+            }
+            else if (cbcd3.Checked)
+            {
+                tong = tong + Ca_3;
+            }
+            else if (cbcd1.Checked && cbcd2.Checked)
+            {
+                tong = Ca_1 + Ca_2;
+            }
+            else if (cbcd1.Checked && cbcd3.Checked)
+            {
+                tong = Ca_1 + Ca_3;
+            }
+            else if (cbcd2.Checked && cbcd3.Checked)
+            {
+                tong = Ca_2 + Ca_3;
+            }
+            else if (cbcd1.Checked && cbcd2.Checked && cbcd3.Checked)
+            {
+                tong = Ca_1 + Ca_2 + Ca_3;
+            }
+            else
+            {
+                return 0;
+            }
+            return tong;
+        }
+        private int tongCD()
+        {
+            int tongcd1 = 1;
+            int tongcd2 = 1;
+            int tongcd3 = 1;
+            int tong = 0;
+            if (cbcongdoan1.Checked)
+            {
+                tong = tong + tongcd1;
+            }
+            else if (cbcongdoan2.Checked)
+            {
+                tong = tong + tongcd2;
+            }
+            else if (cbcongdoan3.Checked)
+            {
+                tong = tong + tongcd3;
+            }
+            else if (cbcongdoan1.Checked && cbcongdoan2.Checked)
+            {
+                tong = tongcd1 + tongcd2;
+            }
+            else if (cbcongdoan1.Checked && cbcongdoan3.Checked)
+            {
+                tong = tongcd1 + tongcd3;
+            }
+            else if (cbcongdoan2.Checked && cbcongdoan3.Checked)
+            {
+                tong = tongcd2 + tongcd3;
+            }
+            else if (cbcongdoan1.Checked && cbcongdoan2.Checked && cbcongdoan3.Checked)
+            {
+                tong = tongcd1 + tongcd2 + tongcd3;
+            }
+            else
+            {
+                return 0;
+            }
+            return tong;
+        }
+
+        private void btnSLCN_Click(object sender, EventArgs e)
+        {
+            frmQLLCN frmQLLCN = new frmQLLCN();
+            frmQLLCN.Show();
         }
     }
 }

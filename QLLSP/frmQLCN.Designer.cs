@@ -152,9 +152,9 @@
             this.lbCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCD.Location = new System.Drawing.Point(535, 384);
             this.lbCD.Name = "lbCD";
-            this.lbCD.Size = new System.Drawing.Size(101, 20);
+            this.lbCD.Size = new System.Drawing.Size(148, 20);
             this.lbCD.TabIndex = 37;
-            this.lbCD.Text = "Công Đoạn";
+            this.lbCD.Text = "Tổng Công Đoạn";
             // 
             // lbHT
             // 
@@ -170,30 +170,30 @@
             // 
             this.txtCLV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCLV.Location = new System.Drawing.Point(172, 463);
+            this.txtCLV.Location = new System.Drawing.Point(211, 463);
             this.txtCLV.Multiline = true;
             this.txtCLV.Name = "txtCLV";
-            this.txtCLV.Size = new System.Drawing.Size(305, 31);
+            this.txtCLV.Size = new System.Drawing.Size(266, 31);
             this.txtCLV.TabIndex = 35;
             // 
             // txtSP
             // 
             this.txtSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSP.Location = new System.Drawing.Point(172, 418);
+            this.txtSP.Location = new System.Drawing.Point(211, 418);
             this.txtSP.Multiline = true;
             this.txtSP.Name = "txtSP";
-            this.txtSP.Size = new System.Drawing.Size(305, 31);
+            this.txtSP.Size = new System.Drawing.Size(266, 31);
             this.txtSP.TabIndex = 34;
             // 
             // txtMCN
             // 
             this.txtMCN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMCN.Location = new System.Drawing.Point(172, 377);
+            this.txtMCN.Location = new System.Drawing.Point(211, 377);
             this.txtMCN.Multiline = true;
             this.txtMCN.Name = "txtMCN";
-            this.txtMCN.Size = new System.Drawing.Size(305, 31);
+            this.txtMCN.Size = new System.Drawing.Size(266, 31);
             this.txtMCN.TabIndex = 33;
             // 
             // lbCLV
@@ -202,9 +202,9 @@
             this.lbCLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCLV.Location = new System.Drawing.Point(11, 471);
             this.lbCLV.Name = "lbCLV";
-            this.lbCLV.Size = new System.Drawing.Size(117, 20);
+            this.lbCLV.Size = new System.Drawing.Size(164, 20);
             this.lbCLV.TabIndex = 32;
-            this.lbCLV.Text = "Ca Làm Việc";
+            this.lbCLV.Text = "Tổng Ca Làm Việc";
             // 
             // lbSP
             // 
@@ -261,10 +261,10 @@
             // 
             this.txtMK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMK.Location = new System.Drawing.Point(172, 336);
+            this.txtMK.Location = new System.Drawing.Point(211, 336);
             this.txtMK.Multiline = true;
             this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(305, 31);
+            this.txtMK.Size = new System.Drawing.Size(266, 31);
             this.txtMK.TabIndex = 48;
             // 
             // btnUpdate
