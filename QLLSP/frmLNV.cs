@@ -18,8 +18,8 @@ namespace QLLSP
         string _MSNV;
         int? _Thang, _Nam;
         decimal? _HeSoLuong, _PhuCapChucVu;
-        int? _SoNgayLamViec, _SoNgayNghiCoPhep;
-        decimal? _TienBaoHiemXaHoi;
+        int? _SoNgayLamViec = null, _SoNgayNghiCoPhep = null;
+        decimal? _TienBaoHiemXaHoi = null;
         decimal? _TongLuong;
         string strLID, strMNV, strThang, strNam, strHeSoLuong, strPhuCapChucVu, strSoNgayLamViec, strSoNgayNghiCoPhep, strTienBaoHiemXaHoi, strTongLuong;
 
@@ -44,10 +44,6 @@ namespace QLLSP
             txtYear.Text = "";
             txtHSL.Text = "";
             txtPCCV.Text = "";
-            txtSNLV.Text = "";
-            txtSNNCP.Text = "";
-            txtTBHXH.Text = "";
-            txtTL.Text = "";
             txtLID.Text = "";
         }
 
@@ -93,30 +89,6 @@ namespace QLLSP
                     return;
                 }
 
-                if (!int.TryParse(txtSNLV.Text.Trim(), out int soNgayLamViec))
-                {
-                    MessageBox.Show("Số ngày làm việc không hợp lệ!");
-                    return;
-                }
-
-                if (!int.TryParse(txtSNNCP.Text.Trim(), out int soNgayNghiCoPhep))
-                {
-                    MessageBox.Show("Số ngày nghỉ có phép không hợp lệ!");
-                    return;
-                }
-
-                if (!decimal.TryParse(txtTBHXH.Text.Trim(), out decimal tienBaoHiemXaHoi))
-                {
-                    MessageBox.Show("Tiền bảo hiểm xã hội không hợp lệ!");
-                    return;
-                }
-
-                if (!decimal.TryParse(txtTL.Text.Trim(), out decimal tongLuong))
-                {
-                    MessageBox.Show("Tổng lương không hợp lệ!");
-                    return;
-                }
-
                 // Gọi hàm insert
                 bool result = database.EditQuanLyLuongNhanVienData(
                     _LuongID,
@@ -124,11 +96,7 @@ namespace QLLSP
                     thang,
                     nam,
                     heSoLuong,
-                    phuCapChucVu,
-                    soNgayLamViec,
-                    soNgayNghiCoPhep,
-                    tienBaoHiemXaHoi,
-                    tongLuong
+                    phuCapChucVu
                 );
 
                 // Hiển thị thông báo kết quả
@@ -155,22 +123,24 @@ namespace QLLSP
             txtYear.Text = strNam;
             txtHSL.Text = strHeSoLuong;
             txtPCCV.Text = strPhuCapChucVu;
-            txtSNLV.Text = strSoNgayLamViec;
-            txtSNNCP.Text = strSoNgayNghiCoPhep;
-            txtTBHXH.Text = strTienBaoHiemXaHoi;
-            txtTL.Text = strTongLuong;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            string msnv;
+            msnv = txtMNV.Text.Trim();
+            string strHoten, strGioitinh, strDonViQuanLy;
+            DateTime strNgaySinh, strNgayBatDauCongTac;
+            int soNgayLamViec, soNgayNghi, soNgayNghiCoPhep, soGioLamThem;
+            string strChucVu, strTrinhDoChuyenMon, strTrinhDoNgoaiNgu;
+            database.GetNhanVienData(msnv,
+    out strHoten, out strGioitinh, out strNgaySinh, out strNgayBatDauCongTac,
+    out strDonViQuanLy, out soNgayLamViec, out soNgayNghi, out soNgayNghiCoPhep,
+    out soGioLamThem, out strChucVu, out strTrinhDoChuyenMon, out strTrinhDoNgoaiNgu);
             try
             {
                 _LuongID = txtLID.Text.Trim();
-                if (string.IsNullOrEmpty(_LuongID))
-                {
-                    MessageBox.Show("Lương ID không được để trống!");
-                    return;
-                }
+                
                 _MSNV = txtMNV.Text.Trim();
                 if (string.IsNullOrEmpty(_MSNV))
                 {
@@ -203,30 +173,6 @@ namespace QLLSP
                     return;
                 }
 
-                if (!int.TryParse(txtSNLV.Text.Trim(), out int soNgayLamViec))
-                {
-                    MessageBox.Show("Số ngày làm việc không hợp lệ!");
-                    return;
-                }
-
-                if (!int.TryParse(txtSNNCP.Text.Trim(), out int soNgayNghiCoPhep))
-                {
-                    MessageBox.Show("Số ngày nghỉ có phép không hợp lệ!");
-                    return;
-                }
-
-                if (!decimal.TryParse(txtTBHXH.Text.Trim(), out decimal tienBaoHiemXaHoi))
-                {
-                    MessageBox.Show("Tiền bảo hiểm xã hội không hợp lệ!");
-                    return;
-                }
-
-                if (!decimal.TryParse(txtTL.Text.Trim(), out decimal tongLuong))
-                {
-                    MessageBox.Show("Tổng lương không hợp lệ!");
-                    return;
-                }
-
                 // Gọi hàm insert
                 bool result = database.InsertQuanLyLuongNhanVienData(
                     _MSNV,
@@ -235,19 +181,17 @@ namespace QLLSP
                     heSoLuong,
                     phuCapChucVu,
                     soNgayLamViec,
-                    soNgayNghiCoPhep,
-                    tienBaoHiemXaHoi,
-                    tongLuong
+                    soNgayNghiCoPhep
                 );
 
                 // Hiển thị thông báo kết quả
                 if (result)
                 {
-                    MessageBox.Show("Thêm dữ liệu thành công!");
+                    MessageBox.Show("Tính lương thành công. ");
                 }
                 else
                 {
-                    MessageBox.Show("Thêm dữ liệu thất bại!");
+                    MessageBox.Show("Tính lương thất bại!");
                 }
             }
             catch (Exception ex)
@@ -274,10 +218,6 @@ namespace QLLSP
             strNam = Nam;
             strHeSoLuong = HeSoLuong;
             strPhuCapChucVu = PhuCapChucVu;
-            strSoNgayLamViec = SoNgayLamViec;
-            strSoNgayNghiCoPhep = SoNgayNghiCoPhep;
-            strTienBaoHiemXaHoi = TienBaoHiemXaHoi;
-            strTongLuong = TongLuong;
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {

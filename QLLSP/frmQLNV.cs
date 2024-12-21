@@ -106,7 +106,7 @@ namespace QLLSP
     out soGioLamThem, out chucVu, out trinhDoChuyenMon, out trinhDoNgoaiNgu);
             txtHT.Text = hoTen;
             txtDV.Text = donViQuanLy;
-            txtNN.Text = soNgayNghi.ToString();
+            txtNN.Text = soNgayNghiCoPhep.ToString();
             txtSGLT.Text = soGioLamThem.ToString();
             txtCV.Text = chucVu;
             txtNCDL.Text = soNgayLamViec.ToString();
@@ -141,7 +141,7 @@ namespace QLLSP
             strHoten = txtHT.Text.Trim();
             soNgayLamViec = int.Parse(txtNCDL.Text.Trim());
             strChucVu = txtCV.Text.Trim();
-            soNgayNghi = int.Parse(txtNN.Text.Trim());
+            soNgayNghiCoPhep = int.Parse(txtNN.Text.Trim());
             strDonViQuanLy = txtDV.Text.Trim();
             soGioLamThem = int.Parse(txtSGLT.Text.Trim());
             string strMatKhau = txtMK.Text.Trim();

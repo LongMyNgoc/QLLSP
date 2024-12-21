@@ -73,14 +73,14 @@ namespace QLLSP
             strNgaySinh = dtkNS.Value.ToString();
             strNgayBatDauCongTac = txtNBDCT.Text;
             strDonViQuanLy = txtDVQL.Text;
-            soNgayLamViec = int.Parse(txtSNLV.Text);
+            soNgayLamViec = int.Parse(txtSNLV.Text.Trim());
             soNgayNghi = int.Parse(txtSNN.Text);
-            soNgayNghiCoPhep = int.Parse(txtSNNCP.Text);
+            soNgayNghiCoPhep = int.Parse(txtSNNCP.Text.Trim());
             soGioLamThem = int.Parse(txtSGLT.Text);
             strChucVu = txtCV.Text;
             strTrinhDoChuyenMon = txtTDCM.Text;
             strTrinhDoNgoaiNgu = txtTDNN.Text;
-            if (database.EditNhanVien(_msnv, strHoten,strGioitinh, strNgaySinh, strNgayBatDauCongTac, strDonViQuanLy, soNgayLamViec, soNgayNghi, soNgayNghiCoPhep, soGioLamThem, strChucVu, strTrinhDoChuyenMon, strTrinhDoNgoaiNgu))
+            if (database.EditNhanVien(_msnv, strHoten,strGioitinh, strNgaySinh, strNgayBatDauCongTac, strDonViQuanLy,soNgayLamViec, soNgayNghi,soNgayNghiCoPhep, soGioLamThem, strChucVu, strTrinhDoChuyenMon, strTrinhDoNgoaiNgu))
             {
                 MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

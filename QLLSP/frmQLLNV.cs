@@ -17,7 +17,7 @@ namespace QLLSP
         public frmQLLNV()
         {
             InitializeComponent();
-            LoadQuanLyLuongData();
+            LoadNhanVienData();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -55,7 +55,11 @@ namespace QLLSP
             DataTable quanLyLuongData = database.GetQuanLyLuongNhanVienData();
             dataGridView1.DataSource = quanLyLuongData;
         }
-
+        private void LoadNhanVienData()
+        {
+            DataTable quanLyLuongData = database.GetNhanVienData();
+            dataGridView1.DataSource = quanLyLuongData;
+        }
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -63,7 +67,7 @@ namespace QLLSP
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            LoadQuanLyLuongData();
+            LoadNhanVienData();
         }
 
         private void btnTK_Click(object sender, EventArgs e)
@@ -82,6 +86,11 @@ namespace QLLSP
             {
                 MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message);
             }
+        }
+
+        private void btnHTL_Click(object sender, EventArgs e)
+        {
+            LoadQuanLyLuongData();
         }
     }
 }

@@ -40,23 +40,23 @@
             this.txtTK = new System.Windows.Forms.TextBox();
             this.lbTK = new System.Windows.Forms.Label();
             this.lbUser = new System.Windows.Forms.Label();
-            this.lbDVQL = new System.Windows.Forms.Label();
-            this.txtDVQL = new System.Windows.Forms.TextBox();
-            this.lbSNLV = new System.Windows.Forms.Label();
-            this.txtSNLV = new System.Windows.Forms.TextBox();
-            this.lbSNN = new System.Windows.Forms.Label();
-            this.txtSNN = new System.Windows.Forms.TextBox();
-            this.lbSNNCP = new System.Windows.Forms.Label();
-            this.txtSNNCP = new System.Windows.Forms.TextBox();
-            this.lbSGLT = new System.Windows.Forms.Label();
-            this.txtSGLT = new System.Windows.Forms.TextBox();
             this.lbTDCM = new System.Windows.Forms.Label();
             this.lbTDNN = new System.Windows.Forms.Label();
             this.txtTDCM = new System.Windows.Forms.TextBox();
             this.txtTDNN = new System.Windows.Forms.TextBox();
-            this.lbCV = new System.Windows.Forms.Label();
-            this.txtCV = new System.Windows.Forms.TextBox();
             this.dtkNS = new System.Windows.Forms.DateTimePicker();
+            this.txtCV = new System.Windows.Forms.TextBox();
+            this.txtDVQL = new System.Windows.Forms.TextBox();
+            this.lbDVQL = new System.Windows.Forms.Label();
+            this.lbCV = new System.Windows.Forms.Label();
+            this.txtSGLT = new System.Windows.Forms.TextBox();
+            this.txtSNN = new System.Windows.Forms.TextBox();
+            this.lbSGLT = new System.Windows.Forms.Label();
+            this.lbSNN = new System.Windows.Forms.Label();
+            this.lbSNNCP = new System.Windows.Forms.Label();
+            this.txtSNNCP = new System.Windows.Forms.TextBox();
+            this.txtSNLV = new System.Windows.Forms.TextBox();
+            this.lbSNLV = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNBDCT
@@ -66,6 +66,7 @@
             this.txtNBDCT.Location = new System.Drawing.Point(313, 201);
             this.txtNBDCT.Multiline = true;
             this.txtNBDCT.Name = "txtNBDCT";
+            this.txtNBDCT.ReadOnly = true;
             this.txtNBDCT.Size = new System.Drawing.Size(228, 31);
             this.txtNBDCT.TabIndex = 28;
             this.txtNBDCT.TextChanged += new System.EventHandler(this.txtNBDCT_TextChanged);
@@ -152,7 +153,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(70, 47);
             this.btnSave.TabIndex = 20;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -187,107 +188,6 @@
             this.lbUser.TabIndex = 17;
             this.lbUser.Text = "Thông Tin Nhân Viên";
             // 
-            // lbDVQL
-            // 
-            this.lbDVQL.AutoSize = true;
-            this.lbDVQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDVQL.Location = new System.Drawing.Point(17, 262);
-            this.lbDVQL.Name = "lbDVQL";
-            this.lbDVQL.Size = new System.Drawing.Size(165, 25);
-            this.lbDVQL.TabIndex = 30;
-            this.lbDVQL.Text = "Đơn Vị Quản Lý";
-            // 
-            // txtDVQL
-            // 
-            this.txtDVQL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDVQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDVQL.Location = new System.Drawing.Point(313, 256);
-            this.txtDVQL.Multiline = true;
-            this.txtDVQL.Name = "txtDVQL";
-            this.txtDVQL.Size = new System.Drawing.Size(228, 31);
-            this.txtDVQL.TabIndex = 31;
-            // 
-            // lbSNLV
-            // 
-            this.lbSNLV.AutoSize = true;
-            this.lbSNLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSNLV.Location = new System.Drawing.Point(570, 207);
-            this.lbSNLV.Name = "lbSNLV";
-            this.lbSNLV.Size = new System.Drawing.Size(191, 25);
-            this.lbSNLV.TabIndex = 32;
-            this.lbSNLV.Text = "Số Ngày Làm Việc";
-            // 
-            // txtSNLV
-            // 
-            this.txtSNLV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSNLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSNLV.Location = new System.Drawing.Point(776, 203);
-            this.txtSNLV.Multiline = true;
-            this.txtSNLV.Name = "txtSNLV";
-            this.txtSNLV.Size = new System.Drawing.Size(228, 31);
-            this.txtSNLV.TabIndex = 33;
-            // 
-            // lbSNN
-            // 
-            this.lbSNN.AutoSize = true;
-            this.lbSNN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSNN.Location = new System.Drawing.Point(569, 262);
-            this.lbSNN.Name = "lbSNN";
-            this.lbSNN.Size = new System.Drawing.Size(145, 25);
-            this.lbSNN.TabIndex = 34;
-            this.lbSNN.Text = "Số Ngày Nghỉ";
-            this.lbSNN.Click += new System.EventHandler(this.lbSNN_Click);
-            // 
-            // txtSNN
-            // 
-            this.txtSNN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSNN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSNN.Location = new System.Drawing.Point(776, 256);
-            this.txtSNN.Multiline = true;
-            this.txtSNN.Name = "txtSNN";
-            this.txtSNN.Size = new System.Drawing.Size(228, 31);
-            this.txtSNN.TabIndex = 35;
-            // 
-            // lbSNNCP
-            // 
-            this.lbSNNCP.AutoSize = true;
-            this.lbSNNCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSNNCP.Location = new System.Drawing.Point(17, 317);
-            this.lbSNNCP.Name = "lbSNNCP";
-            this.lbSNNCP.Size = new System.Drawing.Size(235, 25);
-            this.lbSNNCP.TabIndex = 36;
-            this.lbSNNCP.Text = "Số Ngày Nghỉ Có Phép";
-            // 
-            // txtSNNCP
-            // 
-            this.txtSNNCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSNNCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSNNCP.Location = new System.Drawing.Point(313, 311);
-            this.txtSNNCP.Multiline = true;
-            this.txtSNNCP.Name = "txtSNNCP";
-            this.txtSNNCP.Size = new System.Drawing.Size(228, 31);
-            this.txtSNNCP.TabIndex = 37;
-            // 
-            // lbSGLT
-            // 
-            this.lbSGLT.AutoSize = true;
-            this.lbSGLT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSGLT.Location = new System.Drawing.Point(569, 317);
-            this.lbSGLT.Name = "lbSGLT";
-            this.lbSGLT.Size = new System.Drawing.Size(186, 25);
-            this.lbSGLT.TabIndex = 38;
-            this.lbSGLT.Text = "Số Giờ Làm Thêm";
-            // 
-            // txtSGLT
-            // 
-            this.txtSGLT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSGLT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSGLT.Location = new System.Drawing.Point(776, 311);
-            this.txtSGLT.Multiline = true;
-            this.txtSGLT.Name = "txtSGLT";
-            this.txtSGLT.Size = new System.Drawing.Size(228, 31);
-            this.txtSGLT.TabIndex = 39;
-            // 
             // lbTDCM
             // 
             this.lbTDCM.AutoSize = true;
@@ -315,6 +215,7 @@
             this.txtTDCM.Location = new System.Drawing.Point(313, 365);
             this.txtTDCM.Multiline = true;
             this.txtTDCM.Name = "txtTDCM";
+            this.txtTDCM.ReadOnly = true;
             this.txtTDCM.Size = new System.Drawing.Size(228, 31);
             this.txtTDCM.TabIndex = 42;
             // 
@@ -325,8 +226,50 @@
             this.txtTDNN.Location = new System.Drawing.Point(313, 418);
             this.txtTDNN.Multiline = true;
             this.txtTDNN.Name = "txtTDNN";
+            this.txtTDNN.ReadOnly = true;
             this.txtTDNN.Size = new System.Drawing.Size(228, 31);
             this.txtTDNN.TabIndex = 43;
+            // 
+            // dtkNS
+            // 
+            this.dtkNS.CustomFormat = "yyyy-mm-dd";
+            this.dtkNS.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtkNS.Location = new System.Drawing.Point(533, 146);
+            this.dtkNS.Name = "dtkNS";
+            this.dtkNS.Size = new System.Drawing.Size(313, 27);
+            this.dtkNS.TabIndex = 46;
+            // 
+            // txtCV
+            // 
+            this.txtCV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCV.Location = new System.Drawing.Point(776, 365);
+            this.txtCV.Multiline = true;
+            this.txtCV.Name = "txtCV";
+            this.txtCV.ReadOnly = true;
+            this.txtCV.Size = new System.Drawing.Size(228, 31);
+            this.txtCV.TabIndex = 45;
+            // 
+            // txtDVQL
+            // 
+            this.txtDVQL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDVQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDVQL.Location = new System.Drawing.Point(313, 256);
+            this.txtDVQL.Multiline = true;
+            this.txtDVQL.Name = "txtDVQL";
+            this.txtDVQL.ReadOnly = true;
+            this.txtDVQL.Size = new System.Drawing.Size(228, 31);
+            this.txtDVQL.TabIndex = 31;
+            // 
+            // lbDVQL
+            // 
+            this.lbDVQL.AutoSize = true;
+            this.lbDVQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDVQL.Location = new System.Drawing.Point(17, 262);
+            this.lbDVQL.Name = "lbDVQL";
+            this.lbDVQL.Size = new System.Drawing.Size(165, 25);
+            this.lbDVQL.TabIndex = 30;
+            this.lbDVQL.Text = "Đơn Vị Quản Lý";
             // 
             // lbCV
             // 
@@ -338,24 +281,90 @@
             this.lbCV.TabIndex = 44;
             this.lbCV.Text = "Chức Vụ";
             // 
-            // txtCV
+            // txtSGLT
             // 
-            this.txtCV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCV.Location = new System.Drawing.Point(776, 365);
-            this.txtCV.Multiline = true;
-            this.txtCV.Name = "txtCV";
-            this.txtCV.Size = new System.Drawing.Size(228, 31);
-            this.txtCV.TabIndex = 45;
+            this.txtSGLT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSGLT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSGLT.Location = new System.Drawing.Point(776, 311);
+            this.txtSGLT.Multiline = true;
+            this.txtSGLT.Name = "txtSGLT";
+            this.txtSGLT.ReadOnly = true;
+            this.txtSGLT.Size = new System.Drawing.Size(228, 31);
+            this.txtSGLT.TabIndex = 39;
             // 
-            // dtkNS
+            // txtSNN
             // 
-            this.dtkNS.CustomFormat = "yyyy-mm-dd";
-            this.dtkNS.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtkNS.Location = new System.Drawing.Point(533, 146);
-            this.dtkNS.Name = "dtkNS";
-            this.dtkNS.Size = new System.Drawing.Size(313, 27);
-            this.dtkNS.TabIndex = 46;
+            this.txtSNN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSNN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSNN.Location = new System.Drawing.Point(776, 256);
+            this.txtSNN.Multiline = true;
+            this.txtSNN.Name = "txtSNN";
+            this.txtSNN.ReadOnly = true;
+            this.txtSNN.Size = new System.Drawing.Size(228, 31);
+            this.txtSNN.TabIndex = 35;
+            // 
+            // lbSGLT
+            // 
+            this.lbSGLT.AutoSize = true;
+            this.lbSGLT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSGLT.Location = new System.Drawing.Point(569, 317);
+            this.lbSGLT.Name = "lbSGLT";
+            this.lbSGLT.Size = new System.Drawing.Size(186, 25);
+            this.lbSGLT.TabIndex = 38;
+            this.lbSGLT.Text = "Số Giờ Làm Thêm";
+            // 
+            // lbSNN
+            // 
+            this.lbSNN.AutoSize = true;
+            this.lbSNN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSNN.Location = new System.Drawing.Point(569, 262);
+            this.lbSNN.Name = "lbSNN";
+            this.lbSNN.Size = new System.Drawing.Size(145, 25);
+            this.lbSNN.TabIndex = 34;
+            this.lbSNN.Text = "Số Ngày Nghỉ";
+            this.lbSNN.Click += new System.EventHandler(this.lbSNN_Click);
+            // 
+            // lbSNNCP
+            // 
+            this.lbSNNCP.AutoSize = true;
+            this.lbSNNCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSNNCP.Location = new System.Drawing.Point(17, 317);
+            this.lbSNNCP.Name = "lbSNNCP";
+            this.lbSNNCP.Size = new System.Drawing.Size(235, 25);
+            this.lbSNNCP.TabIndex = 36;
+            this.lbSNNCP.Text = "Số Ngày Nghỉ Có Phép";
+            // 
+            // txtSNNCP
+            // 
+            this.txtSNNCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSNNCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSNNCP.Location = new System.Drawing.Point(313, 311);
+            this.txtSNNCP.Multiline = true;
+            this.txtSNNCP.Name = "txtSNNCP";
+            this.txtSNNCP.ReadOnly = true;
+            this.txtSNNCP.Size = new System.Drawing.Size(228, 31);
+            this.txtSNNCP.TabIndex = 37;
+            // 
+            // txtSNLV
+            // 
+            this.txtSNLV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSNLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSNLV.Location = new System.Drawing.Point(776, 203);
+            this.txtSNLV.Multiline = true;
+            this.txtSNLV.Name = "txtSNLV";
+            this.txtSNLV.ReadOnly = true;
+            this.txtSNLV.Size = new System.Drawing.Size(228, 31);
+            this.txtSNLV.TabIndex = 33;
+            // 
+            // lbSNLV
+            // 
+            this.lbSNLV.AutoSize = true;
+            this.lbSNLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSNLV.Location = new System.Drawing.Point(570, 207);
+            this.lbSNLV.Name = "lbSNLV";
+            this.lbSNLV.Size = new System.Drawing.Size(191, 25);
+            this.lbSNLV.TabIndex = 32;
+            this.lbSNLV.Text = "Số Ngày Làm Việc";
             // 
             // frmNVInformation
             // 
@@ -411,22 +420,22 @@
         private System.Windows.Forms.TextBox txtTK;
         private System.Windows.Forms.Label lbTK;
         private System.Windows.Forms.Label lbUser;
-        private System.Windows.Forms.Label lbDVQL;
-        private System.Windows.Forms.TextBox txtDVQL;
-        private System.Windows.Forms.Label lbSNLV;
-        private System.Windows.Forms.TextBox txtSNLV;
-        private System.Windows.Forms.Label lbSNN;
-        private System.Windows.Forms.TextBox txtSNN;
-        private System.Windows.Forms.Label lbSNNCP;
-        private System.Windows.Forms.TextBox txtSNNCP;
-        private System.Windows.Forms.Label lbSGLT;
-        private System.Windows.Forms.TextBox txtSGLT;
         private System.Windows.Forms.Label lbTDCM;
         private System.Windows.Forms.Label lbTDNN;
         private System.Windows.Forms.TextBox txtTDCM;
         private System.Windows.Forms.TextBox txtTDNN;
-        private System.Windows.Forms.Label lbCV;
-        private System.Windows.Forms.TextBox txtCV;
         private System.Windows.Forms.DateTimePicker dtkNS;
+        private System.Windows.Forms.TextBox txtCV;
+        private System.Windows.Forms.TextBox txtDVQL;
+        private System.Windows.Forms.Label lbDVQL;
+        private System.Windows.Forms.Label lbCV;
+        private System.Windows.Forms.TextBox txtSGLT;
+        private System.Windows.Forms.TextBox txtSNN;
+        private System.Windows.Forms.Label lbSGLT;
+        private System.Windows.Forms.Label lbSNN;
+        private System.Windows.Forms.Label lbSNNCP;
+        private System.Windows.Forms.TextBox txtSNNCP;
+        private System.Windows.Forms.TextBox txtSNLV;
+        private System.Windows.Forms.Label lbSNLV;
     }
 }

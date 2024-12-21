@@ -150,9 +150,9 @@
             this.lbNN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNN.Location = new System.Drawing.Point(563, 383);
             this.lbNN.Name = "lbNN";
-            this.lbNN.Size = new System.Drawing.Size(95, 20);
+            this.lbNN.Size = new System.Drawing.Size(143, 20);
             this.lbNN.TabIndex = 15;
-            this.lbNN.Text = "Ngày Nghỉ";
+            this.lbNN.Text = "Ngày Nghỉ Phép";
             // 
             // lbDV
             // 
@@ -221,7 +221,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(91, 37);
             this.btnAdd.TabIndex = 22;
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -232,7 +232,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(91, 37);
             this.btnEdit.TabIndex = 23;
-            this.btnEdit.Text = "Get";
+            this.btnEdit.Text = "Lấy";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -243,7 +243,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(91, 39);
             this.btnCancel.TabIndex = 25;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Đóng";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -274,7 +274,7 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(91, 37);
             this.btnUpdate.TabIndex = 50;
-            this.btnUpdate.Text = "Edit";
+            this.btnUpdate.Text = "Sửa";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 

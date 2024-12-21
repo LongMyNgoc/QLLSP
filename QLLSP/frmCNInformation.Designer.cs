@@ -60,6 +60,7 @@
             this.txtTCLV.Location = new System.Drawing.Point(771, 305);
             this.txtTCLV.Multiline = true;
             this.txtTCLV.Name = "txtTCLV";
+            this.txtTCLV.ReadOnly = true;
             this.txtTCLV.Size = new System.Drawing.Size(228, 31);
             this.txtTCLV.TabIndex = 68;
             // 
@@ -80,6 +81,7 @@
             this.txtSLHT.Location = new System.Drawing.Point(327, 305);
             this.txtSLHT.Multiline = true;
             this.txtSLHT.Name = "txtSLHT";
+            this.txtSLHT.ReadOnly = true;
             this.txtSLHT.Size = new System.Drawing.Size(228, 31);
             this.txtSLHT.TabIndex = 66;
             // 
@@ -100,6 +102,7 @@
             this.txtTCD.Location = new System.Drawing.Point(771, 250);
             this.txtTCD.Multiline = true;
             this.txtTCD.Name = "txtTCD";
+            this.txtTCD.ReadOnly = true;
             this.txtTCD.Size = new System.Drawing.Size(228, 31);
             this.txtTCD.TabIndex = 64;
             // 
@@ -120,6 +123,7 @@
             this.txtTSP.Location = new System.Drawing.Point(771, 197);
             this.txtTSP.Multiline = true;
             this.txtTSP.Name = "txtTSP";
+            this.txtTSP.ReadOnly = true;
             this.txtTSP.Size = new System.Drawing.Size(228, 31);
             this.txtTSP.TabIndex = 62;
             // 
@@ -140,6 +144,7 @@
             this.txtDVLV.Location = new System.Drawing.Point(327, 250);
             this.txtDVLV.Multiline = true;
             this.txtDVLV.Name = "txtDVLV";
+            this.txtDVLV.ReadOnly = true;
             this.txtDVLV.Size = new System.Drawing.Size(228, 31);
             this.txtDVLV.TabIndex = 60;
             // 
@@ -160,6 +165,7 @@
             this.txtNBDCT.Location = new System.Drawing.Point(327, 195);
             this.txtNBDCT.Multiline = true;
             this.txtNBDCT.Name = "txtNBDCT";
+            this.txtNBDCT.ReadOnly = true;
             this.txtNBDCT.Size = new System.Drawing.Size(228, 31);
             this.txtNBDCT.TabIndex = 57;
             // 
@@ -245,7 +251,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(127, 73);
             this.btnSave.TabIndex = 49;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "LƯU";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 

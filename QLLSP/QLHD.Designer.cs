@@ -49,12 +49,14 @@
             this.TimeSearch = new System.Windows.Forms.DateTimePicker();
             this.tst = new System.Windows.Forms.Label();
             this.txtSLTSP = new System.Windows.Forms.TextBox();
+            this.lbUser = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DTG1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbUser);
             this.panel1.Controls.Add(this.DTG1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
@@ -64,11 +66,11 @@
             // DTG1
             // 
             this.DTG1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DTG1.Location = new System.Drawing.Point(13, 13);
+            this.DTG1.Location = new System.Drawing.Point(3, 60);
             this.DTG1.Name = "DTG1";
             this.DTG1.RowHeadersWidth = 51;
             this.DTG1.RowTemplate.Height = 24;
-            this.DTG1.Size = new System.Drawing.Size(1082, 367);
+            this.DTG1.Size = new System.Drawing.Size(1102, 320);
             this.DTG1.TabIndex = 0;
             this.DTG1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DTG1_CellContentClick);
             // 
@@ -104,45 +106,50 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 419);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 16);
+            this.label1.Size = new System.Drawing.Size(101, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = "Mã Hợp Đồng";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 458);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 16);
+            this.label2.Size = new System.Drawing.Size(106, 16);
             this.label2.TabIndex = 6;
             this.label2.Text = "Tên Hợp đồng";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 505);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 16);
+            this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 7;
             this.label3.Text = "Ngày bắt đầu";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 549);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 16);
+            this.label4.Size = new System.Drawing.Size(101, 16);
             this.label4.TabIndex = 8;
             this.label4.Text = "Ngày kết thúc";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 597);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 16);
+            this.label5.Size = new System.Drawing.Size(96, 16);
             this.label5.TabIndex = 9;
             this.label5.Text = "Số Lượng SP";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -150,14 +157,16 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(443, 404);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(425, 401);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 16);
+            this.label6.Size = new System.Drawing.Size(85, 20);
             this.label6.TabIndex = 10;
             this.label6.Text = "Tìm kiếm";
             // 
             // ctgSearch
             // 
+            this.ctgSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctgSearch.FormattingEnabled = true;
             this.ctgSearch.Items.AddRange(new object[] {
             "id",
@@ -188,31 +197,34 @@
             // 
             // AddContract
             // 
+            this.AddContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddContract.Location = new System.Drawing.Point(350, 435);
             this.AddContract.Name = "AddContract";
             this.AddContract.Size = new System.Drawing.Size(75, 23);
             this.AddContract.TabIndex = 14;
-            this.AddContract.Text = "Add";
+            this.AddContract.Text = "Thêm";
             this.AddContract.UseVisualStyleBackColor = true;
             this.AddContract.Click += new System.EventHandler(this.AddContract_Click);
             // 
             // UpdContract
             // 
+            this.UpdContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdContract.Location = new System.Drawing.Point(350, 478);
             this.UpdContract.Name = "UpdContract";
             this.UpdContract.Size = new System.Drawing.Size(75, 23);
             this.UpdContract.TabIndex = 15;
-            this.UpdContract.Text = "Update";
+            this.UpdContract.Text = "Sửa";
             this.UpdContract.UseVisualStyleBackColor = true;
             this.UpdContract.Click += new System.EventHandler(this.UpdContract_Click);
             // 
             // DelContract
             // 
+            this.DelContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DelContract.Location = new System.Drawing.Point(350, 520);
             this.DelContract.Name = "DelContract";
             this.DelContract.Size = new System.Drawing.Size(75, 23);
             this.DelContract.TabIndex = 16;
-            this.DelContract.Text = "Delete";
+            this.DelContract.Text = "Xóa";
             this.DelContract.UseVisualStyleBackColor = true;
             this.DelContract.Click += new System.EventHandler(this.DelContract_Click);
             // 
@@ -227,9 +239,10 @@
             // tst
             // 
             this.tst.AutoSize = true;
+            this.tst.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tst.Location = new System.Drawing.Point(12, 638);
             this.tst.Name = "tst";
-            this.tst.Size = new System.Drawing.Size(94, 16);
+            this.tst.Size = new System.Drawing.Size(106, 16);
             this.tst.TabIndex = 18;
             this.tst.Text = "Số Lượng TSP";
             // 
@@ -241,12 +254,22 @@
             this.txtSLTSP.Size = new System.Drawing.Size(200, 22);
             this.txtSLTSP.TabIndex = 19;
             // 
+            // lbUser
+            // 
+            this.lbUser.AutoSize = true;
+            this.lbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUser.Location = new System.Drawing.Point(411, 9);
+            this.lbUser.Name = "lbUser";
+            this.lbUser.Size = new System.Drawing.Size(286, 36);
+            this.lbUser.TabIndex = 52;
+            this.lbUser.Text = "Quản Lý Hợp Đồng";
+            // 
             // QLHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1244, 663);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(1128, 663);
             this.Controls.Add(this.txtSLTSP);
             this.Controls.Add(this.tst);
             this.Controls.Add(this.TimeSearch);
@@ -271,6 +294,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.QLHD_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DTG1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -300,5 +324,6 @@
         private System.Windows.Forms.DateTimePicker TimeSearch;
         private System.Windows.Forms.Label tst;
         private System.Windows.Forms.TextBox txtSLTSP;
+        private System.Windows.Forms.Label lbUser;
     }
 }

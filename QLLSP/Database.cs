@@ -814,7 +814,7 @@ namespace QLSinhVien
                     // Câu lệnh SQL để chèn dữ liệu
                     string query = @"
     INSERT INTO NhanVien (MSNV, MatKhau, HoTen, GioiTinh, NgaySinh, NgayBatDauCongTac, 
-                          DonViQuanLy, SoNgayLamViec, SoNgayNghi, SoGioLamThem, ChucVu)
+                          DonViQuanLy, SoNgayLamViec, SoNgayNghiCoPhep, SoGioLamThem, ChucVu)
     VALUES (@MSNV, @MatKhau, @HoTen, @GioiTinh, @NgaySinh, @NgayBatDauCongTac, 
             @DonViQuanLy, @SoNgayLamViec, @SoNgayNghi, @SoGioLamThem, @ChucVu)";
 
@@ -904,9 +904,8 @@ TienBaoHiemXaHoi,
     decimal HeSoLuong,
     decimal PhuCapChucVu,
     int SoNgayLamViec,
-    int SoNgayNghiCoPhep,
-    decimal TienBaoHiemXaHoi,
-    decimal TongLuong)
+    int SoNgayNghiCoPhep
+)
         {
             try
             {
@@ -916,9 +915,9 @@ TienBaoHiemXaHoi,
 
                     string query = @"
                 INSERT INTO QuanLyLuongNhanVien 
-                (MSNV, Thang, Nam, HeSoLuong, PhuCapChucVu, SoNgayLamViec, SoNgayNghiCoPhep, TienBaoHiemXaHoi, TongLuong)
+                (MSNV, Thang, Nam, HeSoLuong, PhuCapChucVu, SoNgayLamViec, SoNgayNghiCoPhep)
                 VALUES 
-                (@MSNV, @Thang, @Nam, @HeSoLuong, @PhuCapChucVu, @SoNgayLamViec, @SoNgayNghiCoPhep, @TienBaoHiemXaHoi, @TongLuong)";
+                (@MSNV, @Thang, @Nam, @HeSoLuong, @PhuCapChucVu, @SoNgayLamViec, @SoNgayNghiCoPhep)";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -930,8 +929,6 @@ TienBaoHiemXaHoi,
                         cmd.Parameters.AddWithValue("@PhuCapChucVu", PhuCapChucVu);
                         cmd.Parameters.AddWithValue("@SoNgayLamViec", SoNgayLamViec);
                         cmd.Parameters.AddWithValue("@SoNgayNghiCoPhep", SoNgayNghiCoPhep);
-                        cmd.Parameters.AddWithValue("@TienBaoHiemXaHoi", TienBaoHiemXaHoi);
-                        cmd.Parameters.AddWithValue("@TongLuong", TongLuong);
 
                         // Thực thi câu lệnh
                         int rowsAffected = cmd.ExecuteNonQuery();
@@ -953,11 +950,8 @@ TienBaoHiemXaHoi,
     int? Thang = null,
     int? Nam = null,
     decimal? HeSoLuong = null,
-    decimal? PhuCapChucVu = null,
-    int? SoNgayLamViec = null,
-    int? SoNgayNghiCoPhep = null,
-    decimal? TienBaoHiemXaHoi = null,
-    decimal? TongLuong = null)
+    decimal? PhuCapChucVu = null
+    )
         {
             try
             {
@@ -971,27 +965,18 @@ TienBaoHiemXaHoi,
                     Thang = ISNULL(@Thang, Thang),
                     Nam = ISNULL(@Nam, Nam),
                     HeSoLuong = ISNULL(@HeSoLuong, HeSoLuong),
-                    PhuCapChucVu = ISNULL(@PhuCapChucVu, PhuCapChucVu),
-                    SoNgayLamViec = ISNULL(@SoNgayLamViec, SoNgayLamViec),
-                    SoNgayNghiCoPhep = ISNULL(@SoNgayNghiCoPhep, SoNgayNghiCoPhep),
-TienBaoHiemXaHoi = ISNULL(@TienBaoHiemXaHoi, TienBaoHiemXaHoi),
-                    TongLuong = ISNULL(@TongLuong, TongLuong)
+                    PhuCapChucVu = ISNULL(@PhuCapChucVu, PhuCapChucVu)
                 WHERE LuongID = @LuongID";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        // Gán giá trị tham số
-                        cmd.Parameters.AddWithValue("@LuongID", LuongID);
 
                         // Kiểm tra giá trị null và gán giá trị
                         cmd.Parameters.AddWithValue("@Thang", (object)Thang ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@Nam", (object)Nam ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@HeSoLuong", (object)HeSoLuong ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@PhuCapChucVu", (object)PhuCapChucVu ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("@SoNgayLamViec", (object)SoNgayLamViec ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("@SoNgayNghiCoPhep", (object)SoNgayNghiCoPhep ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("@TienBaoHiemXaHoi", (object)TienBaoHiemXaHoi ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("@TongLuong", (object)TongLuong ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@LuongID", LuongID);
 
                         // Thực thi câu lệnh
                         int rowsAffected = cmd.ExecuteNonQuery();

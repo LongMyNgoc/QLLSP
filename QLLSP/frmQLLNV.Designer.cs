@@ -34,6 +34,7 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnTK = new System.Windows.Forms.Button();
             this.txtTK = new System.Windows.Forms.TextBox();
+            this.btnHTL = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,11 +62,11 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(987, 458);
+            this.btnCancel.Location = new System.Drawing.Point(263, 458);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 53);
             this.btnCancel.TabIndex = 26;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Đóng";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -76,7 +77,7 @@
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(100, 53);
             this.btnLoad.TabIndex = 27;
-            this.btnLoad.Text = "Load";
+            this.btnLoad.Text = "Tải Lại";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
@@ -101,12 +102,24 @@
             this.txtTK.Size = new System.Drawing.Size(978, 53);
             this.txtTK.TabIndex = 67;
             // 
+            // btnHTL
+            // 
+            this.btnHTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHTL.Location = new System.Drawing.Point(109, 458);
+            this.btnHTL.Name = "btnHTL";
+            this.btnHTL.Size = new System.Drawing.Size(148, 53);
+            this.btnHTL.TabIndex = 68;
+            this.btnHTL.Text = "Hiển Thị Lương";
+            this.btnHTL.UseVisualStyleBackColor = true;
+            this.btnHTL.Click += new System.EventHandler(this.btnHTL_Click);
+            // 
             // frmQLLNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1099, 512);
+            this.Controls.Add(this.btnHTL);
             this.Controls.Add(this.txtTK);
             this.Controls.Add(this.btnTK);
             this.Controls.Add(this.btnLoad);
@@ -129,5 +142,6 @@
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnTK;
         private System.Windows.Forms.TextBox txtTK;
+        private System.Windows.Forms.Button btnHTL;
     }
 }
